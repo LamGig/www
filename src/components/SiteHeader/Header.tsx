@@ -32,27 +32,33 @@ export const Header = () => {
             {isScrolled ? (
               <motion.div
                 key="logo"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ 
+                  duration: 0.4,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
                 className="relative"
               >
                 <Image
                   src="/logo.svg"
                   alt="LamGig Logo"
-                  width={32}
-                  height={32}
+                  width={30}
+                  height={30}
                 />
               </motion.div>
             ) : (
               <motion.div
                 key="text"
-                initial={{ opacity: 0, y: -10 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className="text-xl text-white tracking-tight"
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ 
+                  duration: 0.4,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
+                className="text-xl text-white"
               >
                 <span className="font-semibold">Lam</span>
                 <span className="font-normal">Gig</span>

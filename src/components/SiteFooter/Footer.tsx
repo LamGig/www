@@ -5,7 +5,7 @@ import { Link } from "@heroui/react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -14,11 +14,14 @@ export const Footer = () => {
               <Image
                 src="/logo.svg"
                 alt="LamGig Logo"
-                width={32}
-                height={32}
-                className="mr-3"
+                width={30}
+                height={30}
+                className="mr-2"
               />
-              <span className="font-bold text-xl">LamGig</span>
+              <span className="font-bold text-xl">
+                <span className="font-semibold">Lam</span>
+                <span className="font-normal">Gig</span>
+              </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Transforming ideas into digital reality with custom web applications, mobile apps, and innovative solutions.

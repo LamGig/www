@@ -11,6 +11,10 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-black: #111;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
