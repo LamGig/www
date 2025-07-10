@@ -77,35 +77,64 @@ export const Header = () => {
               Home
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Dropdown placement="bottom-start">
+          <Dropdown>
+            <NavbarItem>
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200 flex items-center gap-1"
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+                  endContent={<ChevronDown size={16} />}
                   radius="sm"
                   variant="light"
                 >
                   About
-                  <ChevronDown size={16} />
                 </Button>
               </DropdownTrigger>
-              <DropdownMenu 
-                aria-label="About menu"
-                className="bg-gray-900 shadow-xl border border-gray-700 rounded-lg min-w-48"
+            </NavbarItem>
+            <DropdownMenu
+              aria-label="About menu"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+                key="team"
+                description="Meet the talented people behind LamGig"
+                href="/about/team"
+                startContent={
+                  <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                  </svg>
+                }
               >
-                <DropdownItem key="team" href="/about/team" className="text-gray-300 hover:bg-gray-800 hover:text-white py-3">
-                  Our Team
-                </DropdownItem>
-                <DropdownItem key="story" href="/about/story" className="text-gray-300 hover:bg-gray-800 hover:text-white py-3">
-                  Our Story
-                </DropdownItem>
-                <DropdownItem key="careers" href="/about/careers" className="text-gray-300 hover:bg-gray-800 hover:text-white py-3">
-                  Careers
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </NavbarItem>
+                Our Team
+              </DropdownItem>
+              <DropdownItem
+                key="story"
+                description="Learn about our journey and mission"
+                href="/about/story"
+                startContent={
+                  <svg className="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                }
+              >
+                Our Story
+              </DropdownItem>
+              <DropdownItem
+                key="careers"
+                description="Join our team and grow with us"
+                href="/about/careers"
+                startContent={
+                  <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v6a2 2 0 01-2 2H10a2 2 0 01-2-2V6m8 0H8" />
+                  </svg>
+                }
+              >
+                Careers
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
           <NavbarItem>
             <Link 
               href="/case-studies" 
