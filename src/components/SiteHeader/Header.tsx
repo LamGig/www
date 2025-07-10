@@ -2,25 +2,7 @@
 
 import Image from 'next/image';
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@heroui/react";
-
-const ChevronDownIcon = () => (
-  <svg
-    fill="none"
-    height="16"
-    viewBox="0 0 24 24"
-    width="16"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="m19.92 8.95-6.52 6.52c-.77.77-2.03.77-2.8 0L4.08 8.95"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeMiterlimit={10}
-      strokeWidth={1.5}
-    />
-  </svg>
-);
+import { ChevronDown } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -66,7 +48,7 @@ export const Header = () => {
                   variant="light"
                 >
                   About
-                  <ChevronDownIcon />
+                  <ChevronDown size={16} />
                 </Button>
               </DropdownTrigger>
               <DropdownMenu 
