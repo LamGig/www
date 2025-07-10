@@ -52,3 +52,4 @@ src/
 - The project uses Tailwind CSS v4 which has different configuration than v3
 - HeroUI React is in beta version due to Next.js Tailwind v4 compatibility
 - Uses App Router pattern for routing and layouts
+- Site has max-width of `max-w-7xl`
