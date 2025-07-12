@@ -18,8 +18,8 @@ export interface ExamplePrompt {
  */
 export const examplePrompts: ExamplePrompt[] = [
   {
-    buttonText: "I need a new website for ...",
-    promptValue: `I need a new website for my restaurant business.
+    buttonText: "I need web dev to build a new website for ...",
+    promptValue: `I need web dev to build a new website for my restaurant business.
 
 Key requirements:
 - Online menu and ordering system
@@ -30,8 +30,10 @@ Key requirements:
 Timeline: 6-8 weeks`
   },
   {
-    buttonText: "I want to build a mobile app that ...",
-    promptValue: `I want to build a mobile app that connects local services.
+    buttonText: "I want mobile app dev to build a mobile app that ...",
+    promptValue: `I want mobile app dev to build a mobile app that connects local services.
+
+I'm not sure what exactly I'll need or how long this should take; I'm not a tech person. Give me a free consultation on how this should go.
 
 The app should:
 - Allow users to find nearby service providers
@@ -48,7 +50,7 @@ Platform: iOS and Android
     promptValue: `My startup team needs some frontend devs to build our MVP.
 
 We're looking for:
-- 2-3 experienced React developers
+- 3-4 experienced React developers
 - Experience with TypeScript and modern tooling
 - Strong understanding of React workflows (e.g., Redux, Context API, React Router).
 - Ability to work in an agile environment
