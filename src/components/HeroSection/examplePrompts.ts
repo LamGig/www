@@ -59,7 +59,7 @@ Project details:
 - SaaS dashboard for small businesses
 - 3-month initial engagement, with potential to extend further
 - We have the design already
-- We have in-house backend engieers who will be working on the backend
+- We have in-house backend engineers who will be working on the backend
 `
   }
 ];
