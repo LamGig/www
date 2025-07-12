@@ -10,12 +10,12 @@ export const HeroSection = () => {
           {/* Left side - Text content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Transform Your Ideas Into 
-                <span className="block text-gray-700">Digital Reality</span>
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+                Your Vision. Our Experts.
+                <span className="block">Done Right!</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
-                We help businesses and entrepreneurs bring their vision to life with custom web applications, mobile apps, and digital solutions.
+                Solving your biggest challenges: no more time-consuming interviews or oversight. We meticulously vet our talents and provide complete project management, so you can focus on your business goals.
               </p>
             </div>
             

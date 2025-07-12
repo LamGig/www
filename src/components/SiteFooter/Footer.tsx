@@ -24,7 +24,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Transforming ideas into digital reality with custom web applications, mobile apps, and innovative solutions.
+              Solving your biggest challenges: no more time-consuming interviews or oversight. We meticulously vet our talents and provide complete project management, so you can focus on your business goals.
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">contact@lamgig.com</p>
