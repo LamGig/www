@@ -2,26 +2,24 @@
 
 export const HowItWorksSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative bg-gray-50 overflow-hidden">
       
       <div className="relative py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-16 items-start">
           {/* Left side - Main content */}
           <div className="space-y-8">
-            <div>
-              <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                How It Works
-              </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-lg font-light leading-relaxed">
-                Dealing with digital projects can be complicated, but it doesn't have to be. LamGig makes it easy:
-              </p>
-            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              How It Works
+            </h2>
+            <p className="text-xl mb-8 max-w-lg font-light leading-relaxed">
+              Dealing with digital projects can be complicated, but it doesn't have to be. LamGig makes it easy:
+            </p>
           </div>
 
           {/* Right side - Feature cards */}
           <div className="space-y-6">
             {/* Start with a Free Consultation Card */}
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Start with a Free Consultation</h3>
@@ -45,7 +43,7 @@ export const HowItWorksSection = () => {
             </div>
 
             {/* We Power Your Project Card */}
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -79,7 +77,7 @@ export const HowItWorksSection = () => {
             </div>
 
             {/* Hassle-Free for You Card */}
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
