@@ -78,7 +78,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:from-blue-700 hover:to-blue-900 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
           radius="lg"
           isDisabled={!prompt.trim()} // Disable when textarea is empty or whitespace only
         >
@@ -94,7 +94,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             <button
               key={index}
               onClick={() => handleExampleClick(example)}
-              className="w-full text-left p-4 text-sm text-gray-700 bg-gradient-to-r from-gray-50 to-gray-50/80 hover:from-blue-50 hover:to-purple-50 rounded-xl border border-gray-200 hover:border-blue-200 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+              className="w-full text-left p-4 text-sm text-gray-700 bg-gradient-to-r from-gray-50 to-gray-50/80 hover:from-blue-50 hover:to-blue-100 rounded-xl border border-gray-200 hover:border-blue-200 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
             >
               <span className="font-medium">"{example.buttonText}"</span>
             </button>
