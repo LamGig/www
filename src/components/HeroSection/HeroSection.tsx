@@ -16,9 +16,6 @@ export const HeroSection = () => {
             {/* Hero content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-sm font-medium text-gray-700 mb-6">
-                  ✨ Trusted by 500+ companies worldwide
-                </div> */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent leading-tight">
                   Your Vision.
                   <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -45,24 +42,6 @@ export const HeroSection = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Trust indicators */}
-            {/* <div className="pt-8">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-gray-500 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>24/7 Support</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>99% Success Rate</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Money-back Guarantee</span>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
