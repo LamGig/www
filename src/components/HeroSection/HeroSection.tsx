@@ -14,7 +14,7 @@ export const HeroSection = () => {
               <span className="block">Done Right!</span>
             </h1>
             <p className="text-lg md:text-l text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              No more time-consuming interviews or oversight. We meticulously vet our talents and provide complete project management, so you can focus on your business goals.
+              No more time-consuming interviews or oversight. We meticulously vet our talent and provide complete project management, so you can focus on your business goals.
             </p>
           </div>
 

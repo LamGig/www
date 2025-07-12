@@ -24,7 +24,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Solving your biggest challenges: no more time-consuming interviews or oversight. We meticulously vet our talents and provide complete project management, so you can focus on your business goals.
+              No more time-consuming interviews or oversight. We meticulously vet our talent and provide complete project management, so you can focus on your business goals.
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">contact@lamgig.com</p>

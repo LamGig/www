@@ -1,7 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/react";
-
 export const HowItWorksSection = () => {
   return (
     <section className="bg-gray-100">
@@ -11,32 +9,31 @@ export const HowItWorksSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
-                Launch. Scale.
-                <br />
-                Stabilize.
+                How It Works
               </h2>
               <p className="text-xl text-black/80 mb-8 max-w-lg">
-                Startups and scaleups use Lemon.io developers to accelerate development at every stage.
+                Dealing with digital projects can be complicated, but it doesn't have to be. LamGig makes it easy:
               </p>
-              <Button 
-                className="bg-black text-white px-8 py-6 text-lg font-semibold rounded-xl hover:bg-black/90 transition-colors"
-                size="lg"
-              >
-                Hire to move faster →
-              </Button>
             </div>
           </div>
 
           {/* Right side - Feature cards */}
           <div className="space-y-6">
-            {/* Launch an MVP Card */}
-            <div className="bg-white border-2 border-black rounded-2xl p-8 relative overflow-hidden">
+            {/* Start with a Free Consultation Card */}
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-black mb-4">Launch an MVP</h3>
-                  <p className="text-black/70 text-lg">
-                    Turn proposals and designs into functional prototypes, with a senior developer's expertise.
-                  </p>
+                  <h3 className="text-2xl font-bold text-black mb-4">Start with a Free Consultation</h3>
+                  <ul className="text-lg text-black/80 max-w-lg space-y-2 list-none">
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>You tell us what you want.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>We'll schedule a free consultation to discuss how we can assist you.</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="ml-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center">
@@ -46,18 +43,31 @@ export const HowItWorksSection = () => {
               </div>
             </div>
 
-            {/* Accelerate feature development Card */}
-            <div className="bg-white border-2 border-black rounded-2xl p-8 relative overflow-hidden">
+            {/* We Power Your Project Card */}
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-black mb-2">
-                    Accelerate
-                    <br />
-                    feature development
+                    We Power Your Project
                   </h3>
-                  <p className="text-black/70 text-lg">
-                    Meet launch deadlines with much-needed capacity. Add new skills your team currently lacks.
-                  </p>
+                  <ul className="text-lg text-black/80 max-w-lg space-y-2 list-none">
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>We assign our vetted talent to your project.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>We handle all payroll and legal paperwork with our talent.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>We manage the project, sending you daily updates on the progress.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>We deliver your vision, abstracting all the tedious processes for you.</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="ml-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -67,18 +77,23 @@ export const HowItWorksSection = () => {
               </div>
             </div>
 
-            {/* Stabilize technical infrastructure Card */}
-            <div className="bg-white border-2 border-black rounded-2xl p-8 relative overflow-hidden">
+            {/* Hassle-Free for You Card */}
+            <div className="bg-white rounded-2xl p-8 relative overflow-hidden">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-black mb-2">
-                    Stabilize
-                    <br />
-                    technical infrastructure
+                    Hassle-Free for You
                   </h3>
-                  <p className="text-black/70 text-lg">
-                    Refactor legacy code and get rid of technical debt, so your team can build faster.
-                  </p>
+                  <ul className="text-xl text-black/80 max-w-lg space-y-2 list-none">
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>You pay LamGig on a month-to-month basis.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 text-xl font-bold">•</span>
+                      <span>You can focus on your business goals.</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="ml-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center">
