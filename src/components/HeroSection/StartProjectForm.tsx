@@ -65,11 +65,11 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             key={textareaKey} // Force re-render when examples are clicked
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
-            placeholder="Describe your project idea..."
+            placeholder="Describe what you need ..."
             minRows={4}
             className="w-full"
             classNames={{
-              input: "text-base overflow-y-auto",
+              input: "text-base",
               inputWrapper: "border border-gray-200 hover:border-gray-300 focus-within:border-gray-900"
             }}
           />
@@ -88,7 +88,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
 
       {/* Example prompts section */}
       <div className="space-y-3">
-        <p className="text-sm text-gray-600 font-medium">Try these examples:</p>
+        <p className="text-sm text-gray-600 font-medium">Some examples:</p>
         <div className="space-y-2">
           {examplePrompts.map((example, index) => (
             <button
