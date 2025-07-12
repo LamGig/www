@@ -4,7 +4,7 @@ export const HowItWorksSection = () => {
   return (
     <section className="bg-gray-100">
       <div className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 items-start">
           {/* Left side - Main content */}
           <div className="space-y-8">
             <div>
@@ -24,7 +24,7 @@ export const HowItWorksSection = () => {
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-black mb-4">Start with a Free Consultation</h3>
-                  <ul className="text-lg text-black/80 max-w-lg space-y-2 list-none">
+                  <ul className="text-lg text-black/80 space-y-2 list-none">
                     <li className="flex items-start gap-3">
                       <span className="text-blue-600 text-xl font-bold">•</span>
                       <span>You tell us what you want.</span>
@@ -50,7 +50,7 @@ export const HowItWorksSection = () => {
                   <h3 className="text-2xl font-bold text-black mb-2">
                     We Power Your Project
                   </h3>
-                  <ul className="text-lg text-black/80 max-w-lg space-y-2 list-none">
+                  <ul className="text-lg text-black/80 space-y-2 list-none">
                     <li className="flex items-start gap-3">
                       <span className="text-blue-600 text-xl font-bold">•</span>
                       <span>We assign our vetted talent to your project.</span>
@@ -84,7 +84,7 @@ export const HowItWorksSection = () => {
                   <h3 className="text-2xl font-bold text-black mb-2">
                     Hassle-Free for You
                   </h3>
-                  <ul className="text-xl text-black/80 max-w-lg space-y-2 list-none">
+                  <ul className="text-xl text-black/80 space-y-2 list-none">
                     <li className="flex items-start gap-3">
                       <span className="text-blue-600 text-xl font-bold">•</span>
                       <span>You pay LamGig on a month-to-month basis.</span>
