@@ -70,7 +70,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             className="w-full"
             classNames={{
               input: "text-base",
-              inputWrapper: "border border-gray-200 hover:border-gray-300 focus-within:border-gray-900"
+              inputWrapper: "border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200"
             }}
           />
         </div>
@@ -78,25 +78,25 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-gray-900 text-white hover:bg-gray-800 font-medium"
-          radius="md"
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+          radius="lg"
           isDisabled={!prompt.trim()} // Disable when textarea is empty or whitespace only
         >
-          Start Your Project
+          Start Your Project →
         </Button>
       </form>
 
       {/* Example prompts section */}
-      <div className="space-y-3">
-        <p className="text-sm text-gray-600 font-medium">Some examples:</p>
-        <div className="space-y-2">
+      <div className="space-y-4">
+        <p className="text-sm text-gray-600 font-medium">💡 Need inspiration? Try these examples:</p>
+        <div className="space-y-3">
           {examplePrompts.map((example, index) => (
             <button
               key={index}
               onClick={() => handleExampleClick(example)}
-              className="w-full text-left p-3 text-sm text-gray-700 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors cursor-pointer"
+              className="w-full text-left p-4 text-sm text-gray-700 bg-gradient-to-r from-gray-50 to-gray-50/80 hover:from-blue-50 hover:to-purple-50 rounded-xl border border-gray-200 hover:border-blue-200 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
             >
-              "{example.buttonText}"
+              <span className="font-medium">"{example.buttonText}"</span>
             </button>
           ))}
         </div>
