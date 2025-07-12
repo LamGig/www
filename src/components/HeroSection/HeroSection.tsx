@@ -4,7 +4,7 @@ import { StartProjectForm } from "./StartProjectForm";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-[90vh] flex items-center bg-gray-50 pt-20">
+    <section className="min-h-[max(800px,90vh)] flex items-center bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -17,21 +17,6 @@ export const HeroSection = () => {
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
                 Solving your biggest challenges: no more time-consuming interviews or oversight. We meticulously vet our talents and provide complete project management, so you can focus on your business goals.
               </p>
-            </div>
-
-            <div className="flex items-center gap-8 pt-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">50+</div>
-                <div className="text-sm text-gray-600">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">100%</div>
-                <div className="text-sm text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">24/7</div>
-                <div className="text-sm text-gray-600">Support</div>
-              </div>
             </div>
           </div>
 
