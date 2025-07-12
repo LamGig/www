@@ -57,7 +57,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
   // =====================
   
   return (
-    <div className={`w-full max-w-md space-y-6 ${className}`}>
+    <div className={`w-full space-y-6 ${className}`}>
       {/* Main form with textarea and submit button */}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
