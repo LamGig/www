@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button, Textarea } from "@heroui/react";
+import { examplePrompts, type ExamplePrompt } from "./examplePrompts";
 
 /**
  * Props interface for the StartProjectForm component
@@ -27,16 +28,6 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
   /** Key used to force textarea re-render when examples are clicked */
   const [textareaKey, setTextareaKey] = useState(0);
 
-  // =====================
-  // CONFIGURATION
-  // =====================
-  
-  /** Predefined example prompts to help users get started */
-  const examplePrompts = [
-    "I need a new website for my restaurant business",
-    "I want to build a mobile app that connects local services", 
-    "My startup team needs some frontend devs to build our MVP"
-  ];
 
   // =====================
   // EVENT HANDLERS
@@ -46,8 +37,8 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
    * Handles clicking on an example prompt button
    * Sets the textarea value and forces a re-render to ensure proper display
    */
-  const handleExampleClick = (example: string) => {
-    setPrompt(example);
+  const handleExampleClick = (example: ExamplePrompt) => {
+    setPrompt(example.promptValue);
     setTextareaKey(prev => prev + 1); // Force re-render to work around HeroUI Textarea state issues
   };
 
@@ -78,7 +69,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             minRows={4}
             className="w-full"
             classNames={{
-              input: "text-base",
+              input: "text-base overflow-y-auto",
               inputWrapper: "border border-gray-200 hover:border-gray-300 focus-within:border-gray-900"
             }}
           />
@@ -105,7 +96,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
               onClick={() => handleExampleClick(example)}
               className="w-full text-left p-3 text-sm text-gray-700 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition-colors cursor-pointer"
             >
-              "{example}"
+              "{example.buttonText}"
             </button>
           ))}
         </div>
