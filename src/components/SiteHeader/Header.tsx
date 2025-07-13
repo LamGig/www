@@ -25,7 +25,7 @@ export const Header = () => {
       className="fixed top-0 z-50 bg-black border-b border-gray-800 h-14"
       maxWidth="full"
     >
-      <div className="max-w-7xl mx-auto w-full flex items-center justify-between px-4">
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-between px-2 lg:px-4">
         {/* Branding - Left */}
         <NavbarBrand className="flex items-center">
           <Link href="/" className="flex items-center">

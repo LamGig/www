@@ -55,10 +55,10 @@ export const MainNav = () => {
           <Button 
             as={Link} 
             href="/start-project" 
-            className="bg-white text-black hover:bg-gray-100 font-medium px-8 py-2 text-sm tracking-wide transition-all duration-300"
-            radius="md"
+            className="bg-white text-black hover:bg-gray-100 font-medium transition-all duration-300"
           >
-            Start Your Project
+            <span className="hidden sm:inline">Start Your Project</span>
+            <span className="sm:hidden">Start Project</span>
           </Button>
         </NavbarItem>
       </NavbarContent>
