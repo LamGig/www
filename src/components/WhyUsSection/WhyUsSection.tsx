@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Zap, CheckCircle, Sparkles } from "lucide-react";
+import { Eye, UserCheck, Shield, DollarSign } from "lucide-react";
 
 const reasons = [
   {
-    icon: Rocket,
-    title: "Flexible Scaling",
-    description: "Scale your team size up or down based on current project demands."
-  },
-  {
-    icon: Zap,
+    icon: UserCheck,
     title: "Pre-Vetted Excellence",
     description: "Access top-tier talent that's already been rigorously tested. No more sifting through hundreds of resumes, and a bunch of interviews."
   },
   {
-    icon: CheckCircle,
-    title: "Zero Risk Guarantee",
-    description: "If you're not satisfied within the first week, we'll find you a replacement at no additional cost."
+    icon: Shield,
+    title: "Zero-Risk Staffing",
+    description: "Scale your team size up or down based on current project demands. If you're not satisfied within the first week, we'll find you a replacement at no additional cost."
   },
   {
-    icon: Sparkles,
+    icon: Eye,
+    title: "Project Clarity",
+    description: "Never worried about losing touch with your project's status again, we monitor and provide daily updates, keeping you fully informed."
+  },
+  {
+    icon: DollarSign,
     title: "Transparent Pricing",
     description: "No hidden fees, no surprises, no complex taxes, no employee benefits. Pay a pre-negotiated fixed cost, on month-to-month basis, and only for the talent you use."
   }
