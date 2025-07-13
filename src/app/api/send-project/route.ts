@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'LamGig <projects@lamgig.com>',
+      from: 'LamGig <noreply@updatemail.lamgig.com>',
       to: ['nhat@lamgig.com'],
       subject: `New Project Request from ${email}`,
       react: ProjectSubmissionTemplate({
