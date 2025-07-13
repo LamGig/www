@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import {Navbar, NavbarBrand} from "@heroui/react";
+import {Navbar, NavbarBrand, Link} from "@heroui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MainNav } from "./Nav";
 
@@ -28,43 +28,45 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between px-4">
         {/* Branding - Left */}
         <NavbarBrand className="flex items-center">
-          <AnimatePresence mode="wait">
-            {isScrolled ? (
-              <motion.div
-                key="logo"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ 
-                  duration: 0.4,
-                  ease: [0.22, 1, 0.36, 1]
-                }}
-                className="relative"
-              >
-                <Image
-                  src="/logo.svg"
-                  alt="LamGig Logo"
-                  width={30}
-                  height={30}
-                />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="text"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ 
-                  duration: 0.4,
-                  ease: [0.22, 1, 0.36, 1]
-                }}
-                className="text-xl text-white"
-              >
-                <span className="font-semibold">Lam</span>
-                <span className="font-normal">Gig</span>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <Link href="/" className="flex items-center">
+            <AnimatePresence mode="wait">
+              {isScrolled ? (
+                <motion.div
+                  key="logo"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ 
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
+                  className="relative"
+                >
+                  <Image
+                    src="/logo.svg"
+                    alt="LamGig Logo"
+                    width={30}
+                    height={30}
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="text"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ 
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
+                  className="text-xl text-white"
+                >
+                  <span className="font-semibold">Lam</span>
+                  <span className="font-normal">Gig</span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </Link>
         </NavbarBrand>
         
         {/* Main nav */}

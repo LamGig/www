@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center w-fit">
               <Image
                 src="/logo.svg"
                 alt="LamGig Logo"
@@ -18,11 +18,11 @@ export const Footer = () => {
                 height={30}
                 className="mr-2"
               />
-              <span className="font-bold text-xl">
+              <span className="font-bold text-xl text-white">
                 <span className="font-semibold">Lam</span>
                 <span className="font-normal">Gig</span>
               </span>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               No more time-consuming interviews or oversight. We meticulously vet our talent and provide complete project management, so you can focus on your business goals.
             </p>
