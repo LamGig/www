@@ -28,7 +28,7 @@ const reasons = [
 
 export const WhyUsSection = () => {
   return (
-    <section className="relative py-24 px-6 max-w-7xl mx-auto bg-white">
+    <section id="why-us-section" className="relative py-24 px-6 max-w-7xl mx-auto bg-white">
       {/* Header section */}
       <div className="text-center mb-16 space-y-6">
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-black text-sm font-medium text-white mb-4">

@@ -2,6 +2,19 @@
 
 import { NavbarContent, NavbarItem, Link, Button } from "@heroui/react";
 
+const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  e.preventDefault();
+  const element = document.getElementById(targetId);
+  if (element) {
+    const offset = 80; // Account for fixed header
+    const elementPosition = element.offsetTop - offset;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 export const MainNav = () => {
   return (
     <>
@@ -17,10 +30,20 @@ export const MainNav = () => {
         </NavbarItem>
         <NavbarItem>
           <Link 
-            href="/" 
+            href="/#how-it-works-section"
+            onClick={(e) => handleSmoothScroll(e, 'how-it-works-section')}
             className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
           >
-            About
+            How It Works
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link 
+            href="/#why-us-section"
+            onClick={(e) => handleSmoothScroll(e, 'why-us-section')}
+            className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+          >
+            Why Us
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -35,14 +58,14 @@ export const MainNav = () => {
 
       {/* Sign In & CTA - Right */}
       <NavbarContent justify="end" className="gap-4">
-        <NavbarItem>
+        {/* <NavbarItem>
           <Link 
             href="/sign-in" 
             className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
           >
             Sign In
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
         <NavbarItem>
           <Button 
             as={Link} 

@@ -14,7 +14,7 @@ export const HowItWorksSection = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 0.2], ["0%", "100%"]);
 
   return (
-    <section ref={sectionRef} className="relative py-24 px-6 max-w-4xl mx-auto bg-white">
+    <section id="how-it-works-section" ref={sectionRef} className="relative py-24 px-6 max-w-4xl mx-auto bg-white">
       {/* Header section */}
       <div className="text-center mb-16 space-y-6">
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-black text-sm font-medium text-white mb-4">
