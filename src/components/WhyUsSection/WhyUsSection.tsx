@@ -55,18 +55,18 @@ export const WhyUsSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative p-8 rounded-2xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+              <div className="relative p-8 rounded-2xl border border-gray-200 bg-white transition-all duration-300 h-full flex flex-col">
                 <div className="mb-6">
                   <div className="w-12 h-12 rounded-xl bg-black flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-800 transition-colors">
+                <h3 className="text-xl font-bold text-black mb-4 transition-colors">
                   {reason.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed flex-grow">
+                <p className="leading-relaxed flex-grow">
                   {reason.description}
                 </p>
               </div>

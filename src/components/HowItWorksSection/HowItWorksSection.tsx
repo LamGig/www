@@ -8,10 +8,10 @@ export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 0.2", "end 0.3"]
+    offset: ["start 0", "end 0.1"]
   });
   
-  const lineHeight = useTransform(scrollYProgress, [0, 0.4], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.2], ["0%", "100%"]);
 
   return (
     <section ref={sectionRef} className="relative py-24 px-6 max-w-4xl mx-auto bg-white">
@@ -47,11 +47,11 @@ export const HowItWorksSection = () => {
           {/* Step 1 */}
           <div className="relative group">
             {/* Step number */}
-            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg z-20">
               1
             </div>
             
-            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-start justify-between">
@@ -84,11 +84,11 @@ export const HowItWorksSection = () => {
           {/* Step 2 */}
           <div className="relative group">
             {/* Step number */}
-            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg z-20">
               2
             </div>
             
-            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-start justify-between">
@@ -129,11 +129,11 @@ export const HowItWorksSection = () => {
           {/* Step 3 */}
           <div className="relative group">
             {/* Step number */}
-            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+            <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg z-20">
               3
             </div>
             
-            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-start justify-between">
