@@ -4,7 +4,7 @@ import { StartProjectForm } from "./StartProjectForm";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-[max(900px,100vh)] relative overflow-hidden">
+    <section className="min-h-[max(800px,80vh)] relative overflow-hidden">
       
       <div className="relative flex items-center min-h-[max(900px,100vh)] pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-6 w-full">

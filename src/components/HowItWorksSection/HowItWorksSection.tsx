@@ -10,7 +10,7 @@ export const HowItWorksSection = () => {
     offset: ["start 0.2", "end 0.3"]
   });
   
-  const lineHeight = useTransform(scrollYProgress, [0, 0.3], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.4], ["0%", "100%"]);
 
   return (
     <section ref={sectionRef} className="relative bg-white overflow-hidden">
