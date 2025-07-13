@@ -16,15 +16,15 @@ export const faqData: FAQSection[] = [
     items: [
       {
         question: "What is LamGig?",
-        answer: "LamGig is a platform that connects you with pre-vetted, top-tier talent for your projects. We handle the recruitment, vetting, and project management so you can focus on your business goals."
+        answer: "LamGig is a platform that connects you with pre-vetted, top-tier talent for your projects. We handle the recruitment, vetting, talent, and project management so you can focus on your business goals."
       },
       {
         question: "How are you different from other platforms?",
-        answer: "We provide rigorous talent vetting, complete project management, and match you with only the best candidates. Unlike other platforms, we don't make you sift through hundreds of profiles - we deliver quality matches."
+        answer: "We provide rigorous talent vetting, complete project management, and match you with only the best candidates. Unlike other platforms, we don't make you sift through hundreds of profiles and interviews; we simply deliver quality matches. Also, unlike other platforms where you have to hunt down the status of your project, we update you on its progress daily."
       },
       {
         question: "What's the minimum project duration?",
-        answer: "Our minimum engagement is 160 hours, with most projects averaging 3-6 months. This ensures quality delivery and proper project development."
+        answer: "To ensure high-quality delivery and proper project development, our minimum engagement is 2 weeks, with most projects exceeding 3 months. Additionally, we offer 2 months free for annual contracts."
       },
       {
         question: "Do I own the intellectual property?",
@@ -32,7 +32,7 @@ export const faqData: FAQSection[] = [
       },
       {
         question: "What technologies do you support?",
-        answer: "We specialize in JavaScript, Python, React, Node.js, mobile development, data science, AI/ML, and many other modern technologies. Our talent pool covers full-stack development, DevOps, and specialized domains."
+        answer: "We specialize in JavaScript, React, React Native, Python, React, Node.js, mobile development, data science, AI/ML. Our talent pool covers full-stack development, DevOps, and specialized domains."
       }
     ]
   },
@@ -42,23 +42,15 @@ export const faqData: FAQSection[] = [
     items: [
       {
         question: "How do you vet your talent?",
-        answer: "Our 5-stage vetting process includes CV review, background verification, technical assessments, coding challenges, and comprehensive interviews. Only the top 3% of applicants make it through."
+        answer: "Our 5-stage vetting process includes CV and portfolio review, background verification, technical assessments, and in-person interviews."
       },
       {
         question: "What's the experience level of your talent?",
-        answer: "All our professionals have a minimum of 3 years of experience, with an average of 5+ years. We don't work with junior developers to ensure project quality."
-      },
-      {
-        question: "Can I communicate directly with the team?",
-        answer: "Absolutely! We encourage direct communication with your assigned team members. You'll have full access to collaborate and provide feedback throughout the project."
+        answer: "All our professionals have a minimum of 2 years of experience, with an average of 4-6 years."
       },
       {
         question: "Where are your team members located?",
-        answer: "Our talent is primarily located across North America, Europe, and Latin America, ensuring timezone compatibility and excellent English communication."
-      },
-      {
-        question: "What are your hourly rates?",
-        answer: "Our rates start at $55-85/hour depending on the expertise level and project requirements. All pricing is transparent with no hidden fees."
+        answer: "Our talent is primarily located in Vietnam at this time. Our CTO is in the USA; he is a senior developer with over a decade of experience."
       }
     ]
   },
@@ -68,11 +60,11 @@ export const faqData: FAQSection[] = [
     items: [
       {
         question: "How does billing work?",
-        answer: "We use a two-part billing system: an initial deposit for project setup and regular monthly payments based on actual hours worked. Any unused funds are refunded at project completion."
+        answer: "We use a two-part billing system: an initial deposit for project setup and regular monthly payments. Any unused funds are refunded at project completion."
       },
       {
         question: "When will I be charged?",
-        answer: "Monthly billing occurs on the first Tuesday of each month. For weekly arrangements, billing happens every Tuesday based on reported hours from the previous week."
+        answer: "Monthly billing occurs on the last day of each month. For weekly arrangements, billing happens every Tuesday based on reported hours from the previous week."
       },
       {
         question: "What payment methods do you accept?",
@@ -103,10 +95,6 @@ export const faqData: FAQSection[] = [
       {
         question: "What if I'm not satisfied with the work?",
         answer: "We offer a zero-risk guarantee. If you're not satisfied within the first week, we'll find you a replacement team at no additional cost."
-      },
-      {
-        question: "Can team members work from your office?",
-        answer: "For full-time engagements, office work arrangements are possible. We can cover travel expenses for key team members when necessary."
       }
     ]
   }

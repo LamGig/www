@@ -119,21 +119,45 @@ export const FAQsSection = () => {
   const [activeSection, setActiveSection] = useState<string>("general");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = faqData.map(section => section.id);
-      const scrollPosition = window.scrollY + 150;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const element = document.getElementById(sections[i]);
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
+    // Use Intersection Observer for more reliable section detection
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Only trigger when section is 20% from top to 70% from bottom
+      threshold: 0
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveSection(sectionId);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Wait for DOM to be ready and observe all sections
+    const observeSections = () => {
+      faqData.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.observe(element);
+        }
+      });
+    };
+
+    // Check if DOM is already loaded
+    if (document.readyState === 'complete') {
+      observeSections();
+    } else {
+      window.addEventListener('load', observeSections);
+    }
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('load', observeSections);
+    };
   }, []);
 
   return (
