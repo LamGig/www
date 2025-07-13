@@ -5,10 +5,6 @@ import { StartProjectForm } from "./StartProjectForm";
 export const HeroSection = () => {
   return (
     <section className="min-h-[max(900px,100vh)] relative overflow-hidden">
-      {/* Background gradients */}
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-r from-blue-100/30 to-blue-200/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-gradient-to-l from-blue-100/20 to-blue-200/20 rounded-full blur-3xl" /> */}
       
       <div className="relative flex items-center min-h-[max(900px,100vh)] pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-6 w-full">
@@ -16,9 +12,6 @@ export const HeroSection = () => {
             {/* Left column - Hero content (40%) */}
             <div className="space-y-8">
               <div className="space-y-4">
-                {/* <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-sm font-medium text-gray-700 mb-6">
-                  ✨ Trusted by 100+ companies worldwide
-                </div> */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
                   Your Vision. 
                   <span className="block text-black">

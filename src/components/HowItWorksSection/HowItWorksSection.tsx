@@ -7,10 +7,10 @@ export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 0.4", "end 0.5"]
+    offset: ["start 0.2", "end 0.3"]
   });
   
-  const lineHeight = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.3], ["0%", "100%"]);
 
   return (
     <section ref={sectionRef} className="relative bg-white overflow-hidden">
@@ -32,7 +32,7 @@ export const HowItWorksSection = () => {
         {/* Steps container */}
         <div className="relative space-y-8">
           {/* Animated progress line */}
-          <div className="absolute left-0 top-8 w-0.5 z-0" style={{ height: 'calc(100% - 12rem)' }}>
+          <div className="absolute left-0 top-8 w-0.5 z-0" style={{ height: 'calc(100% - 10rem)' }}>
             {/* Background line */}
             <div className="w-full h-full bg-black/20 rounded-full"></div>
             {/* Animated progress line */}
@@ -46,24 +46,26 @@ export const HowItWorksSection = () => {
             {/* Step 1 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-8 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 1
               </div>
               
               <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
-                {/* Decorative elements */}
-                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-blue-100/30 to-blue-200/30 rounded-full blur-xl"></div>
-                <div className="absolute bottom-2 left-4 w-16 h-16 bg-gradient-to-tr from-blue-50/40 to-purple-50/40 rounded-full blur-lg"></div>
-                
                 <div className="relative">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-black mb-4 flex items-center gap-3">
-                        Start with a Free Consultation
-                        <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                          <span className="text-xl">🚀</span>
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-black mb-4">
+                            Start with a Free Consultation
+                          </h3>
                         </div>
-                      </h3>
+                        <div className="ml-6">
+                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                            <span className="text-xl">🚀</span>
+                          </div>
+                        </div>
+                      </div>
                       <ul className="text-lg text-black space-y-3 list-none">
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
@@ -83,24 +85,26 @@ export const HowItWorksSection = () => {
             {/* Step 2 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-8 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 2
               </div>
               
               <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
-                {/* Decorative elements */}
-                <div className="absolute top-2 right-8 w-24 h-24 bg-gradient-to-bl from-purple-100/30 to-blue-100/30 rounded-full blur-xl"></div>
-                <div className="absolute bottom-4 left-8 w-20 h-20 bg-gradient-to-tr from-blue-50/40 to-blue-50/40 rounded-full blur-lg"></div>
-                
                 <div className="relative">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-black mb-4 flex items-center gap-3">
-                        We Power Your Project
-                        <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                          <span className="text-xl">⚡</span>
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-black mb-4">
+                            We Power Your Project
+                          </h3>
                         </div>
-                      </h3>
+                        <div className="ml-6">
+                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                            <span className="text-xl">⚡</span>
+                          </div>
+                        </div>
+                      </div>
                       <ul className="text-lg text-black space-y-3 list-none">
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
@@ -128,24 +132,26 @@ export const HowItWorksSection = () => {
             {/* Step 3 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-8 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 3
               </div>
               
               <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-black/20 transition-all duration-300">
-                {/* Decorative elements */}
-                <div className="absolute top-6 right-6 w-28 h-28 bg-gradient-to-bl from-blue-100/30 to-blue-100/30 rounded-full blur-xl"></div>
-                <div className="absolute bottom-2 left-2 w-18 h-18 bg-gradient-to-tr from-blue-50/40 to-blue-50/40 rounded-full blur-lg"></div>
-                
                 <div className="relative">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-black mb-4 flex items-center gap-3">
-                        Hassle-Free for You
-                        <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                          <span className="text-xl">🏗️</span>
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-black mb-4">
+                            Hassle-Free for You
+                          </h3>
                         </div>
-                      </h3>
+                        <div className="ml-6">
+                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                            <span className="text-xl">🏗️</span>
+                          </div>
+                        </div>
+                      </div>
                       <ul className="text-lg text-black space-y-3 list-none">
                         <li className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
