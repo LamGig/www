@@ -39,8 +39,9 @@ export const Header = () => {
   return (
     <Navbar 
       position="sticky" 
-      className="fixed top-0 z-50 bg-black border-b border-gray-800 h-14"
+      className="fixed top-0 z-50 bg-black border-b border-gray-800"
       maxWidth="full"
+      height={54}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
