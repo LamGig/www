@@ -68,10 +68,11 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             onChange={(e) => setPrompt(e.target.value)}
             placeholder="Describe what you need ..."
             minRows={4}
+            variant="bordered"
             className="w-full"
             classNames={{
               input: "text-base",
-              inputWrapper: "border border-black/20 hover:border-black/40 focus-within:border-black focus-within:ring-2 focus-within:ring-black/10 transition-all duration-200"
+              inputWrapper: "border border-black/20 hover:border-black/40 focus-within:border-black focus-within:ring-2 focus-within:ring-black/10 bg-gray-50 data-[focus=true]:bg-white transition-all duration-200"
             }}
           />
         </div>
