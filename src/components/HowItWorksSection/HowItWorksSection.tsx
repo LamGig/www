@@ -1,8 +1,19 @@
 "use client";
 
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 export const HowItWorksSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.8", "end 0.2"]
+  });
+  
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   return (
-    <section className="relative bg-gray-50 overflow-hidden">
+    <section ref={sectionRef} className="relative bg-gray-50 overflow-hidden">
       
       <div className="relative py-24 px-6 max-w-4xl mx-auto">
         {/* Header section */}
@@ -19,17 +30,27 @@ export const HowItWorksSection = () => {
         </div>
 
         {/* Steps container */}
-        <div className="space-y-8">
+        <div className="relative space-y-8">
+          {/* Animated progress line */}
+          <div className="absolute left-0 top-12 bottom-12 w-0.5 z-0">
+            {/* Background line */}
+            <div className="w-full h-full bg-gray-200 rounded-full"></div>
+            {/* Animated progress line */}
+            <motion.div 
+              className="absolute top-0 left-0 w-full bg-gradient-to-b from-blue-600 via-blue-500 to-blue-600 rounded-full origin-top"
+              style={{ 
+                height: lineHeight
+              }}
+            ></motion.div>
+          </div>
             {/* Step 1 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 1
               </div>
-              {/* Connecting line */}
-              <div className="absolute -left-1 top-16 w-2 h-20 bg-gradient-to-b from-blue-200 to-blue-100 rounded-full opacity-60"></div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 hover:shadow-2xl hover:bg-white/90 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 transition-all duration-300">
                 {/* Decorative elements */}
                 <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-blue-100/30 to-blue-200/30 rounded-full blur-xl"></div>
                 <div className="absolute bottom-2 left-4 w-16 h-16 bg-gradient-to-tr from-blue-50/40 to-purple-50/40 rounded-full blur-lg"></div>
@@ -62,16 +83,14 @@ export const HowItWorksSection = () => {
             {/* Step 2 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 2
               </div>
-              {/* Connecting line */}
-              <div className="absolute -left-1 top-16 w-2 h-24 bg-gradient-to-b from-blue-200 to-blue-100 rounded-full opacity-60"></div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 hover:shadow-2xl hover:bg-white/90 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 transition-all duration-300">
                 {/* Decorative elements */}
                 <div className="absolute top-2 right-8 w-24 h-24 bg-gradient-to-bl from-purple-100/30 to-blue-100/30 rounded-full blur-xl"></div>
-                <div className="absolute bottom-4 left-8 w-20 h-20 bg-gradient-to-tr from-blue-50/40 to-green-50/40 rounded-full blur-lg"></div>
+                <div className="absolute bottom-4 left-8 w-20 h-20 bg-gradient-to-tr from-blue-50/40 to-blue-50/40 rounded-full blur-lg"></div>
                 
                 <div className="relative">
                   <div className="flex items-start justify-between">
@@ -109,31 +128,31 @@ export const HowItWorksSection = () => {
             {/* Step 3 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 3
               </div>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 hover:shadow-2xl hover:bg-white/90 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 ml-8 relative overflow-hidden shadow-xl border border-white/40 transition-all duration-300">
                 {/* Decorative elements */}
-                <div className="absolute top-6 right-6 w-28 h-28 bg-gradient-to-bl from-green-100/30 to-blue-100/30 rounded-full blur-xl"></div>
-                <div className="absolute bottom-2 left-2 w-18 h-18 bg-gradient-to-tr from-green-50/40 to-blue-50/40 rounded-full blur-lg"></div>
+                <div className="absolute top-6 right-6 w-28 h-28 bg-gradient-to-bl from-blue-100/30 to-blue-100/30 rounded-full blur-xl"></div>
+                <div className="absolute bottom-2 left-2 w-18 h-18 bg-gradient-to-tr from-blue-50/40 to-blue-50/40 rounded-full blur-lg"></div>
                 
                 <div className="relative">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                         Hassle-Free for You
-                        <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-green-200 rounded-xl flex items-center justify-center">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl flex items-center justify-center">
                           <span className="text-xl">🏗️</span>
                         </div>
                       </h3>
                       <ul className="text-lg text-gray-600 space-y-3 list-none">
                         <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-green-600 to-green-800 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full mt-2 flex-shrink-0"></div>
                           <span>You pay LamGig on a month-to-month basis.</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-green-600 to-green-800 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full mt-2 flex-shrink-0"></div>
                           <span>You can focus on your business goals.</span>
                         </li>
                       </ul>
