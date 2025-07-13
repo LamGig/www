@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button, Textarea } from "@heroui/react";
+import { Lightbulb, ArrowRight } from "lucide-react";
 import { examplePrompts, type ExamplePrompt } from "./examplePrompts";
 
 /**
@@ -82,13 +83,19 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
           radius="lg"
           isDisabled={!prompt.trim()} // Disable when textarea is empty or whitespace only
         >
-          Start Your Project →
+          <span className="flex items-center">
+            Start Your Project
+            <ArrowRight className="w-4 h-4 ml-1" strokeWidth={3} />
+          </span>
         </Button>
       </form>
 
       {/* Example prompts section */}
       <div className="space-y-4">
-        <p className="text-sm text-black font-medium">💡 Need inspiration? Try these examples:</p>
+        <p className="text-sm text-black font-medium flex items-center">
+          <Lightbulb className="w-4 h-4 mr-1" />
+          Need inspiration? Try these examples:
+        </p>
         <div className="space-y-3">
           {examplePrompts.map((example, index) => (
             <button

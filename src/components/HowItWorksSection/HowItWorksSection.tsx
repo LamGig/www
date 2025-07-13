@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Rocket, Zap, CheckCircle } from "lucide-react";
+import { Rocket, Zap, CheckCircle, Sparkles } from "lucide-react";
 
 export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -20,7 +20,8 @@ export const HowItWorksSection = () => {
         {/* Header section */}
         <div className="text-center mb-16 space-y-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-black text-sm font-medium text-white mb-4">
-            ✨ Simple & Streamlined Process
+            {/* <Sparkles className="w-4 h-4 mr-2" /> */}
+            Simple & Streamlined Process
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold leading-tight text-black">
             How It Works
