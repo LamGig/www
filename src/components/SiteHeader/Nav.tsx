@@ -6,11 +6,11 @@ export const MainNav = () => {
   return (
     <>
       {/* Main Navigation - Center */}
-      <NavbarContent className="hidden lg:flex gap-10" justify="center">
+      <NavbarContent className="hidden md:flex gap-0 lg:gap-2" justify="center">
         <NavbarItem>
           <Link 
             href="/" 
-            className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+            className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-2xl font-medium text-sm tracking-wide transition-all duration-200"
           >
             Home
           </Link>
@@ -18,7 +18,7 @@ export const MainNav = () => {
         <NavbarItem>
           <Link 
             href="/#how-it-works-section"
-            className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+            className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-2xl font-medium text-sm tracking-wide transition-colors duration-200"
           >
             How It Works
           </Link>
@@ -26,7 +26,7 @@ export const MainNav = () => {
         <NavbarItem>
           <Link 
             href="/#why-us-section"
-            className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+            className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-2xl font-medium text-sm tracking-wide transition-colors duration-200"
           >
             Why Us
           </Link>
@@ -34,7 +34,7 @@ export const MainNav = () => {
         <NavbarItem>
           <Link 
             href="/faqs" 
-            className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
+            className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-2xl font-medium text-sm tracking-wide transition-colors duration-200"
           >
             FAQs
           </Link>
@@ -55,7 +55,8 @@ export const MainNav = () => {
           <Button 
             as={Link} 
             href="/start-project" 
-            className="bg-white text-black hover:bg-gray-100 font-medium transition-all duration-300"
+            className="bg-white text-black hover:bg-gray-100 font-medium transition-all duration-300 h-9 px-3 sm:px-4 text-sm"
+            radius="md"
           >
             <span className="hidden sm:inline">Start Your Project</span>
             <span className="sm:hidden">Start Project</span>
