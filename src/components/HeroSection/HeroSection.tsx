@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { StartProjectForm } from "./StartProjectForm";
+import { StartProjectForm } from "@/components/StartProjectForm";
 
 export const HeroSection = () => {
   return (
@@ -27,18 +26,7 @@ export const HeroSection = () => {
 
           {/* Right column - Project Form (60%) */}
           <div className="flex-1 lg:flex-[3] min-w-0">
-            <motion.div 
-              initial={{ boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" }}
-              animate={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-              className="bg-white rounded-2xl border border-black p-6 lg:p-10"
-            >
-              <div className="mb-6">
-                <h2 className="text-2xl font-semibold text-black mb-2">Start Your Project</h2>
-                <p className="text-black">Tell us about your vision and we'll match you with the perfect team</p>
-              </div>
-              <StartProjectForm />
-            </motion.div>
+            <StartProjectForm />
           </div>
         </div>
       </div>
