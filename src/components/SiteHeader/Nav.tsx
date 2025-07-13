@@ -2,19 +2,6 @@
 
 import { NavbarContent, NavbarItem, Link, Button } from "@heroui/react";
 
-const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-  e.preventDefault();
-  const element = document.getElementById(targetId);
-  if (element) {
-    const offset = 80; // Account for fixed header
-    const elementPosition = element.offsetTop - offset;
-    window.scrollTo({
-      top: elementPosition,
-      behavior: 'smooth'
-    });
-  }
-};
-
 export const MainNav = () => {
   return (
     <>
@@ -31,7 +18,6 @@ export const MainNav = () => {
         <NavbarItem>
           <Link 
             href="/#how-it-works-section"
-            onClick={(e) => handleSmoothScroll(e, 'how-it-works-section')}
             className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
           >
             How It Works
@@ -40,7 +26,6 @@ export const MainNav = () => {
         <NavbarItem>
           <Link 
             href="/#why-us-section"
-            onClick={(e) => handleSmoothScroll(e, 'why-us-section')}
             className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
           >
             Why Us
