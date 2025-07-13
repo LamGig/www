@@ -11,7 +11,7 @@ export const HeroSection = () => {
           {/* Left column - Hero content (40%) */}
           <div className="flex-1 lg:flex-[2] space-y-8">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight">
                 Your Vision. 
                 <span className="block text-black">
                   Our Experts.
