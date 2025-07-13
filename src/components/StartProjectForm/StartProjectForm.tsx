@@ -179,11 +179,11 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
       </div>
       
       <div className={`w-full min-w-0 overflow-hidden ${className}`}>
-        <div className="relative">
+        <div className="relative w-full">
           {/* Step 1: Project Description */}
-          <div className={`transition-transform duration-500 ease-in-out ${
+          <div className={`w-full transition-transform duration-500 ease-in-out ${
             currentStep === 1 ? 'translate-x-0' : '-translate-x-full'
-          }`}>
+          }`} style={{ transform: currentStep === 1 ? 'translateX(0%)' : 'translateX(-100%)' }}>
             <div className="space-y-6">
               {/* Textarea and next button */}
               <div className="w-full space-y-4">
@@ -262,7 +262,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
           {/* Step 2: Contact Information */}
           <div className={`absolute top-0 left-0 w-full transition-transform duration-500 ease-in-out ${
             currentStep === 2 ? 'translate-x-0' : 'translate-x-full'
-          }`}>
+          }`} style={{ transform: currentStep === 2 ? 'translateX(0%)' : 'translateX(100%)' }}>
             <Form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 <Controller
