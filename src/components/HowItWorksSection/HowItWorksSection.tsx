@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Rocket, Zap, CheckCircle, Sparkles } from "lucide-react";
+import { Rocket, Zap, CheckCircle } from "lucide-react";
 
 export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -25,7 +25,7 @@ export const HowItWorksSection = () => {
           How It Works
         </h2>
         <p className="text-xl text-black font-light leading-relaxed max-w-2xl mx-auto">
-          Dealing with digital projects can be complicated, but it doesn't have to be. LamGig makes it easy:
+          Dealing with digital projects can be complicated, but it doesn&apos;t have to be. LamGig makes it easy:
         </p>
       </div>
 
@@ -78,7 +78,7 @@ export const HowItWorksSection = () => {
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                        <span>We'll schedule a free consultation to discuss how we can assist you.</span>
+                        <span>We&apos;ll schedule a free consultation to discuss how we can assist you.</span>
                       </li>
                     </ul>
                   </div>
