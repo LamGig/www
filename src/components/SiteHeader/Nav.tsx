@@ -25,10 +25,10 @@ export const MainNav = () => {
         </NavbarItem>
         <NavbarItem>
           <Link 
-            href="/case-studies" 
+            href="/faqs" 
             className="text-gray-300 hover:text-white font-medium text-sm tracking-wide transition-colors duration-200"
           >
-            Case Studies
+            FAQs
           </Link>
         </NavbarItem>
       </NavbarContent>
