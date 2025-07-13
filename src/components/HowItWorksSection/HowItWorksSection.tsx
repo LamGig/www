@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Rocket, Zap, CheckCircle } from "lucide-react";
 
 export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,7 +63,7 @@ export const HowItWorksSection = () => {
                         </div>
                         <div className="ml-6">
                           <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                            <span className="text-xl">🚀</span>
+                            <Rocket className="w-6 h-6 text-black" />
                           </div>
                         </div>
                       </div>
@@ -101,7 +102,7 @@ export const HowItWorksSection = () => {
                         </div>
                         <div className="ml-6">
                           <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                            <span className="text-xl">⚡</span>
+                            <Zap className="w-6 h-6 text-black" />
                           </div>
                         </div>
                       </div>
@@ -148,7 +149,7 @@ export const HowItWorksSection = () => {
                         </div>
                         <div className="ml-6">
                           <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
-                            <span className="text-xl">🏗️</span>
+                            <CheckCircle className="w-6 h-6 text-black" />
                           </div>
                         </div>
                       </div>
