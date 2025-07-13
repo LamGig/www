@@ -200,7 +200,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             currentStep === 2 ? 'translate-x-0' : 'translate-x-full'
           }`}>
             <Form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 <Controller
                   control={control}
                   name="firstname"
@@ -316,16 +316,16 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
               />
 
               {/* Navigation buttons */}
-              <div className="flex gap-4">
+              <div className="flex gap-4 w-full justify-between">
                 <Button
-                  onClick={handleBackStep}
+                  onPress={handleBackStep}
                   size="lg"
                   variant="bordered"
-                  className="flex-1 border-black text-black hover:bg-black/5 font-semibold transition-all duration-200"
+                  className="flex-1 pl-1 pr-2 border-black text-black hover:bg-black/5 font-semibold transition-all duration-200"
                   radius="lg"
                 >
                   <span className="flex items-center">
-                    <ArrowLeft className="w-4 h-4 mr-1" strokeWidth={3} />
+                    <ArrowLeft className="h-4 mr-1" strokeWidth={3} />
                     Back
                   </span>
                 </Button>
