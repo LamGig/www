@@ -39,6 +39,9 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
   // =====================
   
   const [currentStep, setCurrentStep] = useState<1 | 2>(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   
   // =====================
   // FORM MANAGEMENT
@@ -85,24 +88,85 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
 
   /**
    * Handles final form submission
-   * Logs all form data for development purposes
+   * Sends data to API endpoint and manages loading/success states
    */
-  const onSubmit = (data: ProjectFormData) => {
-    console.log("Form submitted:", {
-      prompt: data.prompt,
-      contact: {
-        firstname: data.firstname,
-        lastname: data.lastname,
-        email: data.email,
-        phonenumber: data.phonenumber,
+  const onSubmit = async (data: ProjectFormData) => {
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch('/api/send-project', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstname: data.firstname,
+          lastname: data.lastname,
+          email: data.email,
+          phonenumber: data.phonenumber,
+          prompt: data.prompt,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit project request');
       }
-    });
+
+      setIsSuccess(true);
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // =====================
   // RENDER
   // =====================
   
+  // If form was successfully submitted, show thank you message
+  if (isSuccess) {
+    return (
+      <div className="bg-white rounded-2xl border border-black p-6 lg:p-10 shadow-2xl">
+        <div className="text-center space-y-6">
+          <div className="text-6xl">✅</div>
+          <h1 className="text-3xl md:text-4xl font-bold text-black">
+            Thank You!
+          </h1>
+          <div className="space-y-4">
+            <p className="text-lg text-black">
+              Your project request has been submitted successfully.
+            </p>
+            <p className="text-base text-gray-600">
+              We&apos;ll get in touch with you within 24 hours to discuss your project in detail.
+            </p>
+          </div>
+          <Button
+            onClick={() => {
+              setIsSuccess(false);
+              setCurrentStep(1);
+              setSubmitError(null);
+              // Reset form to initial values
+              setValue("prompt", "");
+              setValue("firstname", "");
+              setValue("lastname", "");
+              setValue("email", "");
+              setValue("phonenumber", "");
+            }}
+            className="bg-black text-white hover:bg-black/80 font-semibold transition-all duration-200"
+            radius="lg"
+            size="lg"
+          >
+            Submit Another Project
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-2xl border border-black p-6 lg:p-10 shadow-2xl">
       <div className="mb-6 text-center">
@@ -315,6 +379,13 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                 )}
               />
 
+              {/* Error message */}
+              {submitError && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-600 text-sm">{submitError}</p>
+                </div>
+              )}
+
               {/* Navigation buttons */}
               <div className="flex gap-4 w-full justify-between">
                 <Button
@@ -335,8 +406,10 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                   size="lg"
                   className="flex-1 bg-black text-white hover:bg-black/80 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
                   radius="lg"
+                  isLoading={isSubmitting}
+                  isDisabled={isSubmitting}
                 >
-                  Submit
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </Button>
               </div>
             </Form>
