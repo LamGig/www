@@ -7,10 +7,10 @@ export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 0.8", "end 0.2"]
+    offset: ["start 0.4", "end 0.5"]
   });
   
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
 
   return (
     <section ref={sectionRef} className="relative bg-gray-50 overflow-hidden">
@@ -32,7 +32,7 @@ export const HowItWorksSection = () => {
         {/* Steps container */}
         <div className="relative space-y-8">
           {/* Animated progress line */}
-          <div className="absolute left-0 top-12 bottom-12 w-0.5 z-0">
+          <div className="absolute left-0 top-8 w-0.5 z-0" style={{ height: 'calc(100% - 12rem)' }}>
             {/* Background line */}
             <div className="w-full h-full bg-gray-200 rounded-full"></div>
             {/* Animated progress line */}
@@ -46,7 +46,7 @@ export const HowItWorksSection = () => {
             {/* Step 1 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 1
               </div>
               
@@ -83,7 +83,7 @@ export const HowItWorksSection = () => {
             {/* Step 2 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 2
               </div>
               
@@ -128,7 +128,7 @@ export const HowItWorksSection = () => {
             {/* Step 3 */}
             <div className="relative group">
               {/* Step number */}
-              <div className="absolute -left-6 top-6 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
+              <div className="absolute -left-6 top-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg z-20">
                 3
               </div>
               
