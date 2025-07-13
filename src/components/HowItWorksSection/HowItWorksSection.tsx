@@ -54,13 +54,18 @@ export const HowItWorksSection = () => {
             <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="flex items-start justify-between">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
                       <div className="flex-1">
+                        <div className="flex flex-col sm:hidden mb-4">
+                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                            <Rocket className="w-6 h-6 text-black" />
+                          </div>
+                        </div>
                         <h3 className="text-2xl font-bold text-black mb-4">
                           Start with a Free Consultation
                         </h3>
                       </div>
-                      <div className="ml-6">
+                      <div className="hidden sm:block sm:ml-6">
                         <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
                           <Rocket className="w-6 h-6 text-black" />
                         </div>
@@ -91,13 +96,18 @@ export const HowItWorksSection = () => {
             <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex-1">
+                      <div className="flex flex-col sm:hidden mb-4">
+                        <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                          <Zap className="w-6 h-6 text-black" />
+                        </div>
+                      </div>
                       <h3 className="text-2xl font-bold text-black mb-4">
                         We Power Your Project
                       </h3>
                     </div>
-                    <div className="ml-6">
+                    <div className="hidden sm:block sm:ml-6">
                       <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
                         <Zap className="w-6 h-6 text-black" />
                       </div>
@@ -136,13 +146,18 @@ export const HowItWorksSection = () => {
             <div className="bg-white rounded-2xl p-8 ml-8 relative overflow-hidden border border-black/20 transition-all duration-300">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex-1">
+                      <div className="flex flex-col sm:hidden mb-4">
+                        <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
+                          <CheckCircle className="w-6 h-6 text-black" />
+                        </div>
+                      </div>
                       <h3 className="text-2xl font-bold text-black mb-4">
                         Hassle-Free for You
                       </h3>
                     </div>
-                    <div className="ml-6">
+                    <div className="hidden sm:block sm:ml-6">
                       <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center">
                         <CheckCircle className="w-6 h-6 text-black" />
                       </div>
