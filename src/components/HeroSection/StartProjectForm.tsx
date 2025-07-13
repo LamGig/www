@@ -70,7 +70,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             className="w-full"
             classNames={{
               input: "text-base",
-              inputWrapper: "border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200"
+              inputWrapper: "border border-black/20 hover:border-black/40 focus-within:border-black focus-within:ring-2 focus-within:ring-black/10 transition-all duration-200"
             }}
           />
         </div>
@@ -78,7 +78,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white hover:from-blue-700 hover:to-blue-900 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+          className="w-full bg-black text-white hover:bg-black/80 font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
           radius="lg"
           isDisabled={!prompt.trim()} // Disable when textarea is empty or whitespace only
         >
@@ -88,13 +88,13 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
 
       {/* Example prompts section */}
       <div className="space-y-4">
-        <p className="text-sm text-gray-600 font-medium">💡 Need inspiration? Try these examples:</p>
+        <p className="text-sm text-black font-medium">💡 Need inspiration? Try these examples:</p>
         <div className="space-y-3">
           {examplePrompts.map((example, index) => (
             <button
               key={index}
               onClick={() => handleExampleClick(example)}
-              className="w-full text-left p-4 text-sm text-gray-700 bg-gradient-to-r from-gray-50 to-gray-50/80 hover:from-blue-50 hover:to-blue-100 rounded-xl border border-gray-200 hover:border-blue-200 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+              className="w-full text-left p-4 text-sm text-black bg-white hover:bg-black/5 rounded-xl border border-black/20 hover:border-black/40 transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
             >
               <span className="font-medium">"{example.buttonText}"</span>
             </button>
