@@ -2,8 +2,9 @@
 
 import { Controller, useForm } from "react-hook-form";
 import { Button, Textarea, Form, Input } from "@heroui/react";
-import { Lightbulb, ArrowRight, ArrowLeft } from "lucide-react";
+import { Lightbulb, ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { examplePrompts, type ExamplePrompt } from "./examplePrompts";
 
 /**
@@ -130,9 +131,14 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
   // If form was successfully submitted, show thank you message
   if (isSuccess) {
     return (
-      <div className="bg-white rounded-2xl border border-black p-6 lg:p-10 shadow-2xl">
+      <motion.div 
+        className="bg-white rounded-2xl border border-black p-6 lg:p-10"
+        initial={{ boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" }}
+        animate={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      >
         <div className="text-center space-y-6">
-          <div className="text-6xl">✅</div>
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
           <h1 className="text-3xl md:text-4xl font-bold text-black">
             Thank You!
           </h1>
@@ -163,12 +169,17 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
             Submit Another Project
           </Button>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-black p-6 lg:p-10 shadow-2xl">
+    <motion.div 
+      className="bg-white rounded-2xl border border-black p-6 lg:p-10"
+      initial={{ boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" }}
+      animate={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+      transition={{ duration: 2, ease: "easeOut" }}
+    >
       <div className="mb-6 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-black mb-2">
           Start Your Project
@@ -278,7 +289,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
-                      placeholder="First Name"
+                      label="First Name"
                       variant="bordered"
                       validationBehavior="aria"
                       isInvalid={invalid}
@@ -304,7 +315,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
-                      placeholder="Last Name"
+                      label="Last Name"
                       variant="bordered"
                       validationBehavior="aria"
                       isInvalid={invalid}
@@ -331,7 +342,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}
-                    placeholder="Email Address"
+                    label="Email"
                     type="email"
                     variant="bordered"
                     validationBehavior="aria"
@@ -365,7 +376,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}
-                    placeholder="Phone Number (Optional)"
+                    label="Phone Number (Optional)"
                     type="tel"
                     variant="bordered"
                     validationBehavior="aria"
@@ -416,6 +427,6 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

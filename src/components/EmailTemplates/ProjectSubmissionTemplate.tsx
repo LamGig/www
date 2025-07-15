@@ -25,8 +25,12 @@ export function ProjectSubmissionTemplate({
         <h2 style={{ color: '#333333', fontSize: '18px' }}>Contact Information</h2>
         <table style={{ width: '100%', marginTop: '10px' }}>
           <tr>
-            <td style={{ padding: '8px 0', fontWeight: 'bold', width: '120px' }}>Name:</td>
-            <td style={{ padding: '8px 0' }}>{firstname} {lastname}</td>
+            <td style={{ padding: '8px 0', fontWeight: 'bold' }}>First Name:</td>
+            <td style={{ padding: '8px 0' }}>{firstname}</td>
+          </tr>
+          <tr>
+            <td style={{ padding: '8px 0', fontWeight: 'bold' }}>Last Name:</td>
+            <td style={{ padding: '8px 0' }}>{lastname}</td>
           </tr>
           <tr>
             <td style={{ padding: '8px 0', fontWeight: 'bold' }}>Email:</td>

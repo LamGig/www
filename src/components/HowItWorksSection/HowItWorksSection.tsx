@@ -8,10 +8,10 @@ export const HowItWorksSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 0", "end 0.1"]
+    offset: ["start 0", "end 0.8"]
   });
   
-  const lineHeight = useTransform(scrollYProgress, [0, 0.2], ["0%", "100%"]);
+  const lineHeight = useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"]);
 
   return (
     <section id="how-it-works-section" ref={sectionRef} className="relative py-24 px-6 max-w-4xl mx-auto bg-white">
