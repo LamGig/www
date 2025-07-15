@@ -75,14 +75,14 @@ export default function TermsOfServicePage() {
                 THE SERVICES ARE PROVIDED &quot;AS IS.&quot; LAMGIG DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
               </p>
               <p className="mb-4">
-                In no event shall LamGig's total liability arising out of or related to our services exceed the total amount paid by you to LamGig under the applicable SOW. We are not liable for any indirect, incidental, consequential, or special damages, including loss of profits or data.
+                In no event shall LamGig&apos;s total liability arising out of or related to our services exceed the total amount paid by you to LamGig under the applicable SOW. We are not liable for any indirect, incidental, consequential, or special damages, including loss of profits or data.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">8. Termination</h2>
               <p className="mb-4">
-                Either party may terminate the services with appropriate written notice as specified in the project's SOW. Upon termination, you remain responsible for payment for all work performed and expenses incurred up to the date of termination.
+                Either party may terminate the services with appropriate written notice as specified in the project&apos;s SOW. Upon termination, you remain responsible for payment for all work performed and expenses incurred up to the date of termination.
               </p>
             </section>
 
