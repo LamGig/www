@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
               <p className="mb-4">
-                LamGig, Inc. ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.lamgig.com (the "Site") and engage our consulting services (the "Services"). Please read this policy carefully.
+                LamGig, Inc. (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.lamgig.com (the &quot;Site&quot;) and engage our consulting services (the &quot;Services&quot;). Please read this policy carefully.
               </p>
             </section>
 
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Access and Update:</strong> You may request to access or update your personal information by contacting us.</li>
                 <li><strong>Opt-Out of Marketing:</strong> You may opt-out of receiving marketing communications from us by following the unsubscribe link in our emails.</li>
                 <li><strong>Deletion:</strong> You may request deletion of your personal information, subject to our legal and contractual retention needs.</li>
-                <li><strong>California Privacy Rights:</strong> If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). These include the right to know what personal information we collect and how we use it, and the right to request deletion of your information. To exercise these rights, please contact us. We do not "sell" personal information as defined by the CCPA.</li>
+                <li><strong>California Privacy Rights:</strong> If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). These include the right to know what personal information we collect and how we use it, and the right to request deletion of your information. To exercise these rights, please contact us. We do not &quot;sell&quot; personal information as defined by the CCPA.</li>
               </ul>
             </section>
 
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">10. Changes to This Policy</h2>
               <p className="mb-4">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date at the top.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &quot;Last updated&quot; date at the top.
               </p>
             </section>
 

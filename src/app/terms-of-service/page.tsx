@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
               <p className="mb-4">
-                These Terms of Service ("Terms") constitute a legally binding agreement between the client, whether an individual or an entity ("Client," "you"), and LamGig, Inc. ("LamGig," "we," "us," or "our"). These Terms govern all services provided by LamGig to the Client.
+                These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between the client, whether an individual or an entity (&quot;Client,&quot; &quot;you&quot;), and LamGig, Inc. (&quot;LamGig,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms govern all services provided by LamGig to the Client.
               </p>
               <p className="mb-4">
                 By engaging LamGig for services, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, you must not use our services.
@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">2. Description of Service & Scope of Work</h2>
               <p className="mb-4">
-                LamGig provides custom software development, project management, and technology consulting services ("Services"). The specific details, deliverables, timelines, and scope for any project will be defined in a separate Statement of Work ("SOW") document, which will be signed by both parties and will be governed by these Terms.
+                LamGig provides custom software development, project management, and technology consulting services (&quot;Services&quot;). The specific details, deliverables, timelines, and scope for any project will be defined in a separate Statement of Work (&quot;SOW&quot;) document, which will be signed by both parties and will be governed by these Terms.
               </p>
             </section>
 
@@ -55,24 +55,24 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">5. Intellectual Property</h2>
               <p className="mb-4">
-                Upon our receipt of full and final payment from you for a given project, LamGig assigns to you all rights, title, and interest in the custom-developed deliverables ("Work Product") as specified in the SOW.
+                Upon our receipt of full and final payment from you for a given project, LamGig assigns to you all rights, title, and interest in the custom-developed deliverables (&quot;Work Product&quot;) as specified in the SOW.
               </p>
               <p className="mb-4">
-                Notwithstanding the foregoing, LamGig retains ownership of all of its pre-existing intellectual property, including its software, methodologies, tools, and general knowledge ("LamGig IP"). To the extent any LamGig IP is incorporated into the Work Product, LamGig grants you a non-exclusive, perpetual, worldwide, royalty-free license to use such LamGig IP solely as part of the Work Product.
+                Notwithstanding the foregoing, LamGig retains ownership of all of its pre-existing intellectual property, including its software, methodologies, tools, and general knowledge (&quot;LamGig IP&quot;). To the extent any LamGig IP is incorporated into the Work Product, LamGig grants you a non-exclusive, perpetual, worldwide, royalty-free license to use such LamGig IP solely as part of the Work Product.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">6. Confidentiality</h2>
               <p className="mb-4">
-                Both LamGig and the Client ("the Parties") agree to keep confidential all non-public information disclosed by one party to the other. This includes business plans, client lists, financial information, and proprietary technical data. The Parties agree not to disclose such confidential information to any third party without prior written consent, except as required by law. This obligation of confidentiality shall survive the termination of our engagement.
+                Both LamGig and the Client (&quot;the Parties&quot;) agree to keep confidential all non-public information disclosed by one party to the other. This includes business plans, client lists, financial information, and proprietary technical data. The Parties agree not to disclose such confidential information to any third party without prior written consent, except as required by law. This obligation of confidentiality shall survive the termination of our engagement.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">7. Limitation of Liability</h2>
               <p className="mb-4">
-                THE SERVICES ARE PROVIDED "AS IS." LAMGIG DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+                THE SERVICES ARE PROVIDED &quot;AS IS.&quot; LAMGIG DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
               </p>
               <p className="mb-4">
                 In no event shall LamGig's total liability arising out of or related to our services exceed the total amount paid by you to LamGig under the applicable SOW. We are not liable for any indirect, incidental, consequential, or special damages, including loss of profits or data.
@@ -89,7 +89,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">9. Dispute Resolution and Governing Law</h2>
               <p className="mb-4">
-                These Terms, and any dispute arising from them, are governed by the laws of the **State of Delaware**, USA, without regard to its conflict of law principles. Any dispute, claim, or controversy shall be resolved through final and binding arbitration administered by the American Arbitration Association ("AAA") under its Commercial Arbitration Rules. The arbitration will take place in Wilmington, Delaware.
+                These Terms, and any dispute arising from them, are governed by the laws of the **State of Delaware**, USA, without regard to its conflict of law principles. Any dispute, claim, or controversy shall be resolved through final and binding arbitration administered by the American Arbitration Association (&quot;AAA&quot;) under its Commercial Arbitration Rules. The arbitration will take place in Wilmington, Delaware.
               </p>
             </section>
 
