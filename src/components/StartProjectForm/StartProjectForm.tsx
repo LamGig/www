@@ -2,7 +2,7 @@
 
 import { Controller, useForm } from "react-hook-form";
 import { Button, Textarea, Form, Input } from "@heroui/react";
-import { Lightbulb, ArrowRight, ArrowLeft } from "lucide-react";
+import { Lightbulb, ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { examplePrompts, type ExamplePrompt } from "./examplePrompts";
@@ -138,7 +138,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
         transition={{ duration: 2, ease: "easeOut" }}
       >
         <div className="text-center space-y-6">
-          <div className="text-6xl">✅</div>
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
           <h1 className="text-3xl md:text-4xl font-bold text-black">
             Thank You!
           </h1>
