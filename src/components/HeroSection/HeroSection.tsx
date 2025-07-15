@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <section className="relative flex items-center min-h-[max(800px,100vh)] pt-32 pb-24">
       {/* decoration squares  */}
-      <svg aria-hidden="true" className="absolute inset-0 z-0 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_left,white,transparent)]">
+      <svg aria-hidden="true" className="absolute inset-0 z-0 size-full stroke-gray-200 opacity-50 [mask-image:radial-gradient(100%_100%_at_top_left,white,transparent)]">
         <defs>
           <pattern x="50%" y="-1" id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" patternUnits="userSpaceOnUse">
             <path d="M.5 200V.5H200" fill="none"></path>
