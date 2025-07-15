@@ -278,7 +278,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
-                      placeholder="First Name"
+                      label="First Name"
                       variant="bordered"
                       validationBehavior="aria"
                       isInvalid={invalid}
@@ -304,7 +304,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                       value={value}
                       onChange={onChange}
                       onBlur={onBlur}
-                      placeholder="Last Name"
+                      label="Last Name"
                       variant="bordered"
                       validationBehavior="aria"
                       isInvalid={invalid}
@@ -331,7 +331,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}
-                    placeholder="Email Address"
+                    label="Email"
                     type="email"
                     variant="bordered"
                     validationBehavior="aria"
@@ -365,7 +365,7 @@ export const StartProjectForm = ({ className = "" }: StartProjectFormProps) => {
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}
-                    placeholder="Phone Number (Optional)"
+                    label="Phone Number (Optional)"
                     type="tel"
                     variant="bordered"
                     validationBehavior="aria"
