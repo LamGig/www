@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { StartProjectForm } from "@/components/StartProjectForm";
 
 export const HeroSection = () => {
@@ -22,17 +23,41 @@ export const HeroSection = () => {
           <div className="flex-1 lg:flex-[2] space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight">
-                Your Vision. 
-                <span className="block text-black">
+                <motion.span
+                  initial={{ clipPath: "inset(0 100% 0 0)" }}
+                  animate={{ clipPath: "inset(0 0% 0 0)" }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="block"
+                >
+                  Your Vision.
+                </motion.span>
+                <motion.span
+                  initial={{ clipPath: "inset(0 100% 0 0)" }}
+                  animate={{ clipPath: "inset(0 0% 0 0)" }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                  className="block text-black"
+                >
                   Our Experts.
-                </span>
-                <span className="block text-black">Done Right!</span>
+                </motion.span>
+                <motion.span
+                  initial={{ clipPath: "inset(0 100% 0 0)" }}
+                  animate={{ clipPath: "inset(0 0% 0 0)" }}
+                  transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                  className="block text-black"
+                >
+                  Done Right!
+                </motion.span>
               </h1>
             </div>
-            <p className="text-xl md:text-2xl text-black leading-relaxed font-light">
+            <motion.p
+              initial={{ clipPath: "inset(0 100% 0 0)" }}
+              animate={{ clipPath: "inset(0 0% 0 0)" }}
+              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+              className="text-xl md:text-2xl text-black leading-relaxed font-light"
+            >
               No more time-consuming interviews or oversight. We meticulously vet our talent and provide complete project management, so you can
               <span className="font-medium text-black"> focus on your business goals.</span>
-            </p>
+            </motion.p>
           </div>
 
           {/* Right column - Project Form (60%) */}
