@@ -32,7 +32,7 @@ export const faqData: FAQSection[] = [
       },
       {
         question: "What technologies do you support?",
-        answer: "We specialize in JavaScript, React, React Native, Python, React, Node.js, mobile development, data science, AI/ML. Our talent pool covers full-stack development, DevOps, and specialized domains."
+        answer: "We specialize in JavaScript, React, React Native, including website and web app development, and mobile app development."
       }
     ]
   },
