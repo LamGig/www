@@ -25,8 +25,9 @@ export const SiteHeader = () => {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-white border-b border-gray-200">
-      <NavbarContent>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-white border-b border-gray-200" maxWidth="xl">
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
+      <NavbarContent className="flex-grow-0">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden text-gray-800"
@@ -46,7 +47,7 @@ export const SiteHeader = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-8" justify="center">
+      <NavbarContent className="hidden sm:flex gap-8 flex-grow justify-center">
         {menuItems.map((item, index) => (
           <NavbarItem key={item.label}>
             <Link 
@@ -59,7 +60,7 @@ export const SiteHeader = () => {
         ))}
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent className="flex-grow-0" justify="end">
         <NavbarItem>
           <Button 
             as={Link} 
@@ -71,6 +72,7 @@ export const SiteHeader = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
+      </div>
 
       <NavbarMenu className="bg-white">
         {menuItems.map((item, index) => (
