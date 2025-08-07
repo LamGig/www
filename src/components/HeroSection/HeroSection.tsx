@@ -24,7 +24,7 @@ export const HeroSection = () => {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Scale Your Business with{" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                On-Demand Dev Team
+                On-Demand Development
               </span>
             </h1>
           </motion.div>
