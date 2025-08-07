@@ -1,0 +1,1 @@
+export { SiteFooter as SiteFooter } from "./SiteFooter";
