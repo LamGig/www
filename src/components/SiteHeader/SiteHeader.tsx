@@ -25,8 +25,7 @@ export const SiteHeader = () => {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-white border-b border-gray-200" maxWidth="xl">
-      <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
       <NavbarContent className="flex-grow-0">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -72,7 +71,7 @@ export const SiteHeader = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      </div>
+
 
       <NavbarMenu className="bg-white">
         {menuItems.map((item, index) => (
