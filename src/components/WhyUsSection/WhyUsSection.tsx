@@ -57,8 +57,8 @@ export const WhyUsSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_30%,transparent_100%)]" />
       
       {/* Gradient orbs */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-indigo-100 to-transparent rounded-full blur-3xl opacity-40" />
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-gradient-to-tr from-purple-100 to-transparent rounded-full blur-3xl opacity-40" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30" />
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-40" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
@@ -73,7 +73,7 @@ export const WhyUsSection = () => {
             <Chip 
               startContent={<Sparkles className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 text-indigo-700 font-medium"
+              className="bg-blue-50 border border-blue-200 text-[#0072f5] font-medium"
             >
               Built for Growing Businesses
             </Chip>
@@ -82,7 +82,7 @@ export const WhyUsSection = () => {
             variants={itemAnimation}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
-            Why Choose <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">LamGig</span>
+            Why Choose <span className="text-[#0072f5]">LamGig</span>
           </motion.h2>
           <motion.p 
             variants={itemAnimation}
@@ -102,18 +102,8 @@ export const WhyUsSection = () => {
         >
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
-            const gradients = [
-              "from-blue-500 to-indigo-600",
-              "from-green-500 to-emerald-600",
-              "from-purple-500 to-pink-600",
-              "from-orange-500 to-red-600"
-            ];
-            const hoverBorders = [
-              "hover:border-blue-100",
-              "hover:border-green-100",
-              "hover:border-purple-100",
-              "hover:border-orange-100"
-            ];
+            // Use different opacities of the blue color for variety
+            const bgOpacities = ["bg-[#0072f5]", "bg-[#0072f5]/90", "bg-[#0072f5]/80", "bg-[#0072f5]/70"];
             return (
               <motion.div
                 key={index}
@@ -121,9 +111,9 @@ export const WhyUsSection = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="group"
               >
-                <div className={`relative p-8 rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl ${hoverBorders[index]} transition-all duration-300 h-full flex flex-col`}>
+                <div className="relative p-8 rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
                   <div className="mb-6">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-14 h-14 ${bgOpacities[index]} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                   </div>
@@ -149,7 +139,7 @@ export const WhyUsSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-50 to-white rounded-2xl border border-gray-200">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-gradient-to-r from-blue-50/50 to-white rounded-2xl border border-blue-100">
             <div className="text-left">
               <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
               <div className="text-gray-600">Client Satisfaction</div>

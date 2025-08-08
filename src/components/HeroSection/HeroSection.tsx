@@ -38,8 +38,8 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none" />
       
       {/* Gradient orbs - more subtle */}
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-50" />
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-100 to-transparent rounded-full blur-3xl opacity-50" />
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-40" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
         <motion.div 
@@ -53,7 +53,7 @@ export const HeroSection = () => {
             <Chip 
               startContent={<Sparkles className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 text-blue-700 font-medium"
+              className="bg-blue-50 border border-blue-200 text-[#0072f5] font-medium"
             >
               Trusted by 500+ Growing Businesses
             </Chip>
@@ -67,18 +67,11 @@ export const HeroSection = () => {
             Find Expert Freelancers
             <br />
             <span className="relative">
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-[#0072f5]">
                 Build Faster
               </span>
               <svg className="absolute -bottom-2 left-0 w-full" height="6" viewBox="0 0 300 6" fill="none">
-                <path d="M0 3C100 1 200 1 300 3" stroke="url(#gradient)" strokeWidth="2" strokeLinecap="round"/>
-                <defs>
-                  <linearGradient id="gradient" x1="0" y1="0" x2="300" y2="0">
-                    <stop offset="0%" stopColor="#2563eb" />
-                    <stop offset="50%" stopColor="#4f46e5" />
-                    <stop offset="100%" stopColor="#9333ea" />
-                  </linearGradient>
-                </defs>
+                <path d="M0 3C100 1 200 1 300 3" stroke="#0072f5" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </span>
           </motion.h1>
@@ -99,7 +92,7 @@ export const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
+              className="bg-[#0072f5] text-white px-8 py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-[#0072f5]/90 transition-all duration-300"
               endContent={<ArrowRight className="w-5 h-5 ml-1" />}
             >
               Start Your Project
@@ -120,15 +113,15 @@ export const HeroSection = () => {
             className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600 mb-16"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-green-500" />
+              <CheckCircle2 className="w-5 h-5 text-[#0072f5]" />
               <span className="font-medium">No upfront costs</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-blue-500" />
+              <Clock className="w-5 h-5 text-[#0072f5]/80" />
               <span className="font-medium">24-hour matching</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-purple-500" />
+              <Shield className="w-5 h-5 text-[#0072f5]/60" />
               <span className="font-medium">Secure payments</span>
             </div>
           </motion.div>
@@ -143,7 +136,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-[#0072f5] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Vetted Talent Pool</h3>
@@ -155,9 +148,9 @@ export const HeroSection = () => {
             <motion.div 
               variants={itemAnimation}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-indigo-100 transition-all duration-300"
+              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-[#0072f5]/90 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Code2 className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Full-Stack Expertise</h3>
@@ -169,9 +162,9 @@ export const HeroSection = () => {
             <motion.div 
               variants={itemAnimation}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-purple-100 transition-all duration-300"
+              className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-[#0072f5]/80 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Risk-Free Hiring</h3>
