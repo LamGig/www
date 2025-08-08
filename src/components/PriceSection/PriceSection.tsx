@@ -30,27 +30,27 @@ export const PriceSection = () => {
   };
 
   const standardFeatures = [
-    "Up to 20 hours of expert work per month",
-    "Access to pre-vetted developers & designers",
-    "24-hour talent matching",
-    "Dedicated project manager",
-    "Weekly progress reports",
-    "Slack/Email support",
-    "No long-term commitment",
-    "Pause or cancel anytime"
+    "iOS & Android native apps",
+    "White-labeled with your branding",
+    "Custom CMS for content management",
+    "Backend infrastructure & hosting",
+    "App store submission & approval",
+    "Push notifications",
+    "Regular updates & maintenance",
+    "24/7 technical support"
   ];
 
   const enterpriseFeatures = [
-    "Unlimited development hours",
-    "Full-stack development team",
-    "Priority talent matching (same day)",
-    "Senior technical architect",
-    "Daily standup meetings",
-    "24/7 dedicated support",
-    "Custom SLAs & contracts",
-    "Quarterly business reviews",
+    "Completely custom app development",
+    "Unique UI/UX design",
+    "Advanced integrations (POS, CRM, etc.)",
+    "Custom backend architecture",
     "Source code ownership",
-    "NDA & IP protection"
+    "Priority support & SLAs",
+    "Dedicated project manager",
+    "Multiple app variations",
+    "API development",
+    "Scalable infrastructure"
   ];
 
   return (
@@ -84,14 +84,14 @@ export const PriceSection = () => {
             variants={itemAnimation}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
-            Choose Your <span className="text-primary">Growth Plan</span>
+            Choose Your <span className="text-primary">App Package</span>
           </motion.h2>
           
           <motion.p 
             variants={itemAnimation}
             className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
-            Scale your development capacity with flexible monthly plans. No hidden fees, no surprises.
+            Professional mobile apps for small businesses. One simple price, everything included.
           </motion.p>
         </motion.div>
 
@@ -119,7 +119,7 @@ export const PriceSection = () => {
                   Most Popular
                 </Chip>
               </div>
-              <p className="text-gray-600 mb-6">Perfect for growing startups and small teams</p>
+              <p className="text-gray-600 mb-6">Perfect for small businesses ready to go mobile</p>
               
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-5xl font-bold text-gray-900">$400</span>
@@ -133,11 +133,11 @@ export const PriceSection = () => {
               className="w-full bg-primary text-white py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-primary/90 transition-all duration-300 mb-8"
               endContent={<ArrowRight className="w-5 h-5" />}
             >
-              Start Free Trial
+              Get Started Today
             </Button>
 
             <div className="space-y-4">
-              <p className="text-sm font-semibold text-gray-700 uppercase tracking-wider">Everything you need:</p>
+              <p className="text-sm font-semibold text-gray-700 uppercase tracking-wider">What's included:</p>
               <ul className="space-y-3">
                 {standardFeatures.map((feature, index) => (
                   <motion.li 
@@ -178,7 +178,7 @@ export const PriceSection = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <p className="text-gray-300 mb-6">Full-scale development for ambitious projects</p>
+              <p className="text-gray-300 mb-6">Fully custom apps for unique business needs</p>
               
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-5xl font-bold text-white">Custom</span>
@@ -224,7 +224,7 @@ export const PriceSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-600">
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-primary" />
-              <span className="font-medium">Start in 24 hours</span>
+              <span className="font-medium">Launch in 7 days</span>
             </div>
             <div className="flex items-center gap-2">
               <HeartHandshake className="w-5 h-5 text-primary/80" />
@@ -248,7 +248,7 @@ export const PriceSection = () => {
             Have questions about pricing?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our team is here to help you choose the right plan for your business. Get personalized recommendations based on your specific needs.
+            Our team is here to help you choose the right package for your business. See if the Standard Package fits your needs or if you require custom Enterprise development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
