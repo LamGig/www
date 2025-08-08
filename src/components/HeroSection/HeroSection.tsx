@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
-import { ArrowRight, Users, Code2, Shield, Sparkles, CheckCircle2, Clock } from "lucide-react";
+import { ArrowRight, Users, Code2, Shield, Sparkles, CheckCircle2, Clock, Eye } from "lucide-react";
 
 export const HeroSection = () => {
   const containerAnimation = {
@@ -55,7 +55,7 @@ export const HeroSection = () => {
               variant="flat"
               className="bg-blue-50 border border-blue-200 text-primary font-medium"
             >
-              Powering 500+ Small Business Apps
+              Professional Mobile Apps Made Simple
             </Chip>
           </motion.div>
 
@@ -93,8 +93,7 @@ export const HeroSection = () => {
             variants={itemAnimation}
             className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10"
           >
-            Professional mobile apps for small businesses. Choose our Standard Package 
-            or go fully custom with Enterprise - no technical expertise required.
+            Boost sales, retain customers, and grow faster with a mobile app, made easy with our Standard or Enterprise packages.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -113,9 +112,8 @@ export const HeroSection = () => {
               size="lg"
               variant="bordered"
               className="border-2 border-gray-300 text-gray-700 px-8 py-6 text-lg font-semibold hover:border-gray-400 transition-all duration-300"
-              startContent={<Users className="w-5 h-5" />}
             >
-              View Packages
+              View Samples
             </Button>
           </motion.div>
 
