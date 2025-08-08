@@ -23,7 +23,8 @@ export const SiteHeader = () => {
     { label: "Home", href: "/" },
     { label: "How It Works", href: "/#how-it-works-section" },
     { label: "Why Us", href: "/#why-us-section" },
-    { label: "FAQs", href: "/faqs" }
+    { label: "FAQs", href: "/faqs" },
+    { label: "Price", href: "/price" },
   ];
 
   return (
