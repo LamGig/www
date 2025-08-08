@@ -53,7 +53,7 @@ export const HeroSection = () => {
             <Chip 
               startContent={<Sparkles className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-blue-50 border border-blue-200 text-[#0072f5] font-medium"
+              className="bg-blue-50 border border-blue-200 text-primary font-medium"
             >
               Trusted by 500+ Growing Businesses
             </Chip>
@@ -67,7 +67,7 @@ export const HeroSection = () => {
             Find Expert Freelancers
             <br />
             <span className="relative">
-              <span className="text-[#0072f5]">
+              <span className="text-primary">
                 Build Faster
               </span>
               <svg className="absolute -bottom-2 left-0 w-full" height="6" viewBox="0 0 300 6" fill="none">
@@ -92,7 +92,7 @@ export const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="bg-[#0072f5] text-white px-8 py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-[#0072f5]/90 transition-all duration-300"
+              className="bg-primary text-white px-8 py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-primary/90 transition-all duration-300"
               endContent={<ArrowRight className="w-5 h-5 ml-1" />}
             >
               Start Your Project
@@ -113,15 +113,15 @@ export const HeroSection = () => {
             className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600 mb-16"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#0072f5]" />
+              <CheckCircle2 className="w-5 h-5 text-primary" />
               <span className="font-medium">No upfront costs</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-[#0072f5]/80" />
+              <Clock className="w-5 h-5 text-primary/80" />
               <span className="font-medium">24-hour matching</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-[#0072f5]/60" />
+              <Shield className="w-5 h-5 text-primary/60" />
               <span className="font-medium">Secure payments</span>
             </div>
           </motion.div>
@@ -136,7 +136,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-[#0072f5] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Vetted Talent Pool</h3>
@@ -150,7 +150,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-[#0072f5]/90 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Code2 className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Full-Stack Expertise</h3>
@@ -164,7 +164,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-[#0072f5]/80 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Risk-Free Hiring</h3>

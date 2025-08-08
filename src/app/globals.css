@@ -9,6 +9,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* --primary: #0072f5; */ /* already defined in HeroUI as "primary", just putting it here as a note */
 }
 
 @theme inline {

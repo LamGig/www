@@ -60,10 +60,10 @@ export const SiteHeader = () => {
             <NavbarItem key={item.label}>
               <Link 
                 href={item.href}
-                className="px-3 py-1 text-sm font-medium text-gray-600 hover:text-[#0072f5] transition-colors duration-200 relative group"
+                className="px-3 py-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors duration-200 relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0072f5] transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
               </Link>
             </NavbarItem>
           ))}
@@ -77,7 +77,7 @@ export const SiteHeader = () => {
               href="#signin"
               variant="light"
               isIconOnly
-              className="text-gray-600 hover:text-[#0072f5] hover:bg-[#0072f5]/10 transition-all duration-200 min-w-8 h-8"
+              className="text-gray-600 hover:text-primary hover:bg-primary/10 transition-all duration-200 min-w-8 h-8"
               aria-label="Sign In"
             >
               <User size={18} />
@@ -89,7 +89,7 @@ export const SiteHeader = () => {
               href="/start-project" 
               variant="solid"
               size="sm"
-              className="bg-[#0072f5] text-white hover:bg-[#0072f5]/90 shadow-md hover:shadow-lg transition-all duration-200 font-medium h-8 px-4"
+              className="bg-primary text-white hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-200 font-medium h-8 px-4"
             >
               Start Project
             </Button>
@@ -102,7 +102,7 @@ export const SiteHeader = () => {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.label}-${index}`}>
             <Link
-              className="w-full text-base text-gray-700 hover:text-[#0072f5] py-3 transition-colors duration-200"
+              className="w-full text-base text-gray-700 hover:text-primary py-3 transition-colors duration-200"
               href={item.href}
             >
               {item.label}
@@ -111,7 +111,7 @@ export const SiteHeader = () => {
         ))}
         <NavbarMenuItem>
           <Link
-            className="w-full text-base text-gray-700 hover:text-[#0072f5] py-3 transition-colors duration-200 flex items-center gap-2"
+            className="w-full text-base text-gray-700 hover:text-primary py-3 transition-colors duration-200 flex items-center gap-2"
             href="#signin"
           >
             <User size={16} />

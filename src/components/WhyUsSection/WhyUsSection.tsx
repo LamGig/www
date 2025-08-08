@@ -73,7 +73,7 @@ export const WhyUsSection = () => {
             <Chip 
               startContent={<Sparkles className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-blue-50 border border-blue-200 text-[#0072f5] font-medium"
+              className="bg-blue-50 border border-blue-200 text-primary font-medium"
             >
               Built for Growing Businesses
             </Chip>
@@ -82,7 +82,7 @@ export const WhyUsSection = () => {
             variants={itemAnimation}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
-            Why Choose <span className="text-[#0072f5]">LamGig</span>
+            Why Choose <span className="text-primary">LamGig</span>
           </motion.h2>
           <motion.p 
             variants={itemAnimation}
@@ -103,7 +103,7 @@ export const WhyUsSection = () => {
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             // Use different opacities of the blue color for variety
-            const bgOpacities = ["bg-[#0072f5]", "bg-[#0072f5]/90", "bg-[#0072f5]/80", "bg-[#0072f5]/70"];
+            const bgOpacities = ["bg-primary", "bg-primary/90", "bg-primary/80", "bg-primary/70"];
             return (
               <motion.div
                 key={index}

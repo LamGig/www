@@ -56,7 +56,7 @@ export const HowItWorksSection = () => {
             <Chip 
               startContent={<Sparkles className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-blue-50 border border-blue-200 text-[#0072f5] font-medium"
+              className="bg-blue-50 border border-blue-200 text-primary font-medium"
             >
               Simple & Streamlined Process
             </Chip>
@@ -65,7 +65,7 @@ export const HowItWorksSection = () => {
             variants={itemAnimation}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
-            How It <span className="text-[#0072f5]">Works</span>
+            How It <span className="text-primary">Works</span>
           </motion.h2>
           <motion.p 
             variants={itemAnimation}
@@ -83,7 +83,7 @@ export const HowItWorksSection = () => {
             <div className="w-full h-full bg-gray-200 rounded-full"></div>
             {/* Animated progress line */}
             <motion.div 
-              className="absolute top-0 left-0 w-full bg-[#0072f5] rounded-full origin-top"
+              className="absolute top-0 left-0 w-full bg-primary rounded-full origin-top"
               style={{ 
                 height: lineHeight
               }}
@@ -99,7 +99,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-[#0072f5] rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
               1
             </div>
             
@@ -111,7 +111,7 @@ export const HowItWorksSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div className="flex-1">
-                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-[#0072f5] rounded-xl items-center justify-center">
+                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary rounded-xl items-center justify-center">
                         <Rocket className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -120,18 +120,18 @@ export const HowItWorksSection = () => {
                       <p className="text-gray-500 text-sm mb-4">Quick 15-minute discovery call</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
-                      <div className="w-14 h-14 bg-[#0072f5] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Rocket className="w-7 h-7 text-white" />
                       </div>
                     </div>
                   </div>
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Share your project requirements and timeline</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Get expert recommendations and pricing within 24 hours</span>
                     </li>
                   </ul>
@@ -149,7 +149,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-[#0072f5]/90 rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
               2
             </div>
             
@@ -161,7 +161,7 @@ export const HowItWorksSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div className="flex-1">
-                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-[#0072f5]/90 rounded-xl items-center justify-center">
+                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary/90 rounded-xl items-center justify-center">
                         <Zap className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -170,26 +170,26 @@ export const HowItWorksSection = () => {
                       <p className="text-gray-500 text-sm mb-4">End-to-end project management</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
-                      <div className="w-14 h-14 bg-[#0072f5]/90 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Zap className="w-7 h-7 text-white" />
                       </div>
                     </div>
                   </div>
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Match you with pre-vetted experts in 24-48 hours</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Handle all contracts, NDAs, and payment processing</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Provide daily progress updates and milestone tracking</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Deliver quality-assured results on schedule</span>
                     </li>
                   </ul>
@@ -207,7 +207,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-[#0072f5]/80 rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
               3
             </div>
             
@@ -219,7 +219,7 @@ export const HowItWorksSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div className="flex-1">
-                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-[#0072f5]/80 rounded-xl items-center justify-center">
+                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary/80 rounded-xl items-center justify-center">
                         <CheckCircle className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -228,22 +228,22 @@ export const HowItWorksSection = () => {
                       <p className="text-gray-500 text-sm mb-4">Flexible and transparent</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
-                      <div className="w-14 h-14 bg-[#0072f5]/80 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <CheckCircle className="w-7 h-7 text-white" />
                       </div>
                     </div>
                   </div>
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Pay monthly with no long-term commitments</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Scale your team up or down as needed</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#0072f5] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                       <span>Focus on growth while we handle the rest</span>
                     </li>
                   </ul>
