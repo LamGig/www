@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <SiteHeader />
       <HeroSection />
-      <HowItWorksSection />
       <MobileAppBenefitsSection />
+      <HowItWorksSection />
       <WhyUsSection />
       <SiteFooter />
     </>
