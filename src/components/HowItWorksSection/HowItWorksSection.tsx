@@ -71,7 +71,7 @@ export const HowItWorksSection = () => {
             variants={itemAnimation}
             className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
-            From idea to execution in three simple steps. We handle the complexity so you can focus on your business.
+            Get your professional mobile app up and running in just three simple steps. No technical expertise required.
           </motion.p>
         </motion.div>
 
@@ -115,9 +115,9 @@ export const HowItWorksSection = () => {
                         <Rocket className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        Start with a Free Consultation
+                        Choose Your Package
                       </h3>
-                      <p className="text-gray-500 text-sm mb-4">Quick 15-minute discovery call</p>
+                      <p className="text-gray-500 text-sm mb-4">Standard or Enterprise</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
                       <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -128,11 +128,11 @@ export const HowItWorksSection = () => {
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Share your project requirements and timeline</span>
+                      <span>Standard: $400/month or $4000/year for ready-to-launch apps</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Get expert recommendations and pricing within 24 hours</span>
+                      <span>Enterprise: Custom development for unique business needs</span>
                     </li>
                   </ul>
                 </div>
@@ -165,9 +165,9 @@ export const HowItWorksSection = () => {
                         <Zap className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        We Power Your Project
+                        We Build Your App
                       </h3>
-                      <p className="text-gray-500 text-sm mb-4">End-to-end project management</p>
+                      <p className="text-gray-500 text-sm mb-4">Complete setup in 7 days</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
                       <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -178,19 +178,19 @@ export const HowItWorksSection = () => {
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Match you with pre-vetted experts in 24-48 hours</span>
+                      <span>Customize a template with your brand and content</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Handle all contracts, NDAs, and payment processing</span>
+                      <span>Set up your backend, database, and CMS</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Provide daily progress updates and milestone tracking</span>
+                      <span>Configure iOS and Android app stores</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Deliver quality-assured results on schedule</span>
+                      <span>Test everything to ensure perfect functionality</span>
                     </li>
                   </ul>
                 </div>
@@ -223,9 +223,9 @@ export const HowItWorksSection = () => {
                         <CheckCircle className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        Scale with Confidence
+                        Launch & Grow
                       </h3>
-                      <p className="text-gray-500 text-sm mb-4">Flexible and transparent</p>
+                      <p className="text-gray-500 text-sm mb-4">Go live with full support</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
                       <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -236,15 +236,15 @@ export const HowItWorksSection = () => {
                   <ul className="text-gray-600 space-y-3 list-none">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Pay monthly with no long-term commitments</span>
+                      <span>Your app goes live on App Store and Google Play</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Scale your team up or down as needed</span>
+                      <span>Ongoing maintenance and updates included</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Focus on growth while we handle the rest</span>
+                      <span>24/7 support and CMS training provided</span>
                     </li>
                   </ul>
                 </div>

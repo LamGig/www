@@ -7,23 +7,23 @@ import { Chip } from "@heroui/react";
 const reasons = [
   {
     icon: UserCheck,
-    title: "Pre-Vetted Excellence",
-    description: "Access top-tier talent that's already been rigorously tested. No more sifting through hundreds of resumes, and a bunch of interviews."
+    title: "Professional Templates",
+    description: "Start with pre-built, tested templates that work perfectly out of the box. Customize to match your brand without starting from scratch."
   },
   {
     icon: Shield,
-    title: "Zero-Risk Staffing",
-    description: "Scale your team size up or down based on current project demands. If you're not satisfied within the first week, we'll find you a replacement at no additional cost."
+    title: "All-Inclusive Platform",
+    description: "Everything you need in one package: iOS & Android apps, backend infrastructure, CMS, hosting, maintenance, and ongoing support."
   },
   {
     icon: Eye,
-    title: "Project Clarity",
-    description: "Never worried about losing touch with your project's status again, we monitor and provide daily updates, keeping you fully informed."
+    title: "Complete Control",
+    description: "Manage your app content easily with our custom CMS. Update products, prices, and promotions in real-time without any coding."
   },
   {
     icon: DollarSign,
-    title: "Transparent Pricing",
-    description: "No hidden fees, no surprises, no complex taxes, no employee benefits. Pay a pre-negotiated fixed cost, on month-to-month basis, and only for the talent you use."
+    title: "Predictable Costs",
+    description: "One flat monthly fee covers everything. No setup costs, no hidden charges, no surprises. Save $800/year with our annual plan."
   }
 ];
 
@@ -88,7 +88,7 @@ export const WhyUsSection = () => {
             variants={itemAnimation}
             className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
-            We eliminate the complexity of finding and managing freelance talent, so you can focus on what matters most - growing your business.
+            We eliminate the complexity and high cost of mobile app development, making professional apps accessible to every small business.
           </motion.p>
         </motion.div>
 
@@ -141,18 +141,18 @@ export const WhyUsSection = () => {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-gradient-to-r from-blue-50/50 to-white rounded-2xl border border-blue-100">
             <div className="text-left">
-              <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">7 Days</div>
+              <div className="text-gray-600">To Launch</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-gray-300" />
             <div className="text-left">
-              <div className="text-3xl font-bold text-gray-900 mb-1">2-3x</div>
-              <div className="text-gray-600">Faster Delivery</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">90%</div>
+              <div className="text-gray-600">Cost Reduction</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-gray-300" />
             <div className="text-left">
-              <div className="text-3xl font-bold text-gray-900 mb-1">50%</div>
-              <div className="text-gray-600">Cost Savings</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
+              <div className="text-gray-600">Apps Delivered</div>
             </div>
           </div>
         </motion.div>
