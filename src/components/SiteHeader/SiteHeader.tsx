@@ -21,8 +21,8 @@ export const SiteHeader = () => {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Why Us", href: "#why-us" },
+    { label: "How It Works", href: "#how-it-works-section" },
+    { label: "Why Us", href: "#why-us-section" },
     { label: "FAQs", href: "/faqs" }
   ];
 
