@@ -71,7 +71,19 @@ export const HeroSection = () => {
                 Build Faster
               </span>
               <svg className="absolute -bottom-2 left-0 w-full" height="6" viewBox="0 0 300 6" fill="none">
-                <path d="M0 3C100 1 200 1 300 3" stroke="#0072f5" strokeWidth="2" strokeLinecap="round"/>
+                <motion.path 
+                  d="M0 3C100 1 200 1 300 3" 
+                  stroke="#0072f5" 
+                  strokeWidth="2" 
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 1,
+                    ease: "easeInOut"
+                  }}
+                />
               </svg>
             </span>
           </motion.h1>

@@ -7,9 +7,10 @@
 /* #END HeroUI */
 
 :root {
+  /* --primary: #0072f5; */ /* already defined in HeroUI as "primary", just putting it here as a note */
   --background: #ffffff;
   --foreground: #171717;
-  /* --primary: #0072f5; */ /* already defined in HeroUI as "primary", just putting it here as a note */
+  scroll-behavior: smooth;
 }
 
 @theme inline {

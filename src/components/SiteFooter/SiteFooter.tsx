@@ -12,7 +12,7 @@ export const SiteFooter = () => {
           <div className="flex flex-col items-center space-y-3 sm:items-start">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.svg"
+                src="/logo-white.svg"
                 alt="LamGig Logo"
                 width={30}
                 height={30}

@@ -99,7 +99,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
               1
             </div>
             
@@ -149,7 +149,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
               2
             </div>
             
@@ -207,7 +207,7 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg hidden md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
               3
             </div>
             

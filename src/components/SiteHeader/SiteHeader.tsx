@@ -92,8 +92,8 @@ export const SiteHeader = () => {
               variant="light"
               className="text-gray-600 hover:text-primary hover:bg-blue-50 transition-all duration-200 h-10 px-4 font-medium rounded-lg"
             >
-              <User size={18} className="mr-2" />
-              Sign In
+              <User size={18} />
+              Login
             </Button>
           </NavbarItem>
           <NavbarItem>
