@@ -31,8 +31,9 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      {/* Subtle background pattern */}
+      {/* Subtle background pattern with fade */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none" />
       
       {/* Gradient orbs - more subtle */}
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-transparent rounded-full blur-3xl opacity-50" />
