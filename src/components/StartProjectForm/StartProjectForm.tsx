@@ -17,7 +17,9 @@ import {
   Shield,
   Sparkles,
   MessageCircle,
-  Star
+  Star,
+  AlertCircle,
+  Loader2
 } from "lucide-react";
 import { 
   Button, 
@@ -88,8 +90,62 @@ export const StartProjectForm = () => {
     }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted", formData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/send-project', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          package: formData.package,
+          businessDescription: formData.businessDescription,
+          projectNeeds: formData.projectNeeds,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit project');
+      }
+
+      setSubmitStatus('success');
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({
+          package: null,
+          businessDescription: "",
+          projectNeeds: "",
+          firstName: "",
+          lastName: "",
+          company: "",
+          email: "",
+          phone: ""
+        });
+        setCurrentStep("package");
+        setSubmitStatus('idle');
+      }, 3000);
+    } catch (error) {
+      console.error('Submit error:', error);
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Something went wrong');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const isStepValid = () => {
@@ -162,14 +218,14 @@ export const StartProjectForm = () => {
             variants={itemAnimation}
             className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
           >
-            Let's Build Your App
+            Let&apos;s Build Your App
           </motion.h1>
           
           <motion.p 
             variants={itemAnimation}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            We'll respond as fast as we can to get your project started
+            We&apos;ll respond as fast as we can to get your project started
           </motion.p>
         </motion.div>
 
@@ -209,7 +265,7 @@ export const StartProjectForm = () => {
         </motion.div>
 
         {/* Form Content */}
-        <Card className="border border-gray-100">
+        <Card className="border border-gray-50">
           <CardBody className="p-8">
             <AnimatePresence mode="wait">
               {/* Package Selection Step */}
@@ -447,7 +503,7 @@ export const StartProjectForm = () => {
                         <div>
                           <p className="text-sm font-medium text-gray-900">Quick Response</p>
                           <p className="text-sm text-gray-600 mt-1">
-                            We'll review your project details and get back to you as quickly as possible with next steps.
+                            We&apos;ll review your project details and get back to you as quickly as possible with next steps.
                           </p>
                         </div>
                       </div>
@@ -568,6 +624,43 @@ export const StartProjectForm = () => {
               )}
             </AnimatePresence>
 
+            {/* Success/Error Messages */}
+            {submitStatus === 'success' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4"
+              >
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Project submitted successfully!</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      We&apos;ll review your request and get back to you as soon as possible.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {submitStatus === 'error' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4"
+              >
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Failed to submit project</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      {errorMessage || 'Please try again later or contact us directly.'}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
             {/* Navigation Buttons */}
             <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-200">
               <Button
@@ -575,7 +668,7 @@ export const StartProjectForm = () => {
                 className="text-gray-700"
                 startContent={<ArrowLeft className="w-4 h-4" />}
                 onPress={handleBack}
-                isDisabled={currentStep === "package"}
+                isDisabled={currentStep === "package" || isSubmitting}
               >
                 Back
               </Button>
@@ -583,18 +676,18 @@ export const StartProjectForm = () => {
               {currentStep === "contact" ? (
                 <Button
                   className="bg-primary text-white px-6"
-                  endContent={<CheckCircle2 className="w-4 h-4" />}
+                  endContent={isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle2 className="w-4 h-4" />}
                   onPress={handleSubmit}
-                  isDisabled={!isStepValid()}
+                  isDisabled={!isStepValid() || isSubmitting}
                 >
-                  Submit Project
+                  {isSubmitting ? 'Submitting...' : 'Submit Project'}
                 </Button>
               ) : (
                 <Button
                   className="bg-primary text-white px-6"
                   endContent={<ArrowRight className="w-4 h-4" />}
                   onPress={handleNext}
-                  isDisabled={!isStepValid()}
+                  isDisabled={!isStepValid() || isSubmitting}
                 >
                   Continue
                 </Button>
