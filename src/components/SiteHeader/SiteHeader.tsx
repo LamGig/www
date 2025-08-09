@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { User, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Navbar, 
   NavbarBrand, 
@@ -18,6 +18,19 @@ import {
 export const SiteHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 20;
+      setHasScrolled(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { label: "Home", href: "/" },
@@ -41,18 +54,40 @@ export const SiteHeader = () => {
             className="lg:hidden text-gray-600 hover:text-gray-900 mr-3 transition-colors"
           />
           <NavbarBrand as={Link} href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <Image
-                src="/logo.svg"
-                alt="LamGig Logo"
-                width={32}
-                height={32}
-                className="rounded-xl relative z-10 group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="text-xl">
-              <span className="font-normal text-gray-900">Lam</span>
-              <span className="font-bold text-gray-900">Gig</span>
+            <div className="relative w-[32px] h-[32px]">
+              <AnimatePresence mode="wait">
+                {!hasScrolled ? (
+                  <motion.div
+                    key="text"
+                    initial={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="absolute inset-y-0 left-1 flex items-center justify-center"
+                  >
+                    <div className="text-xl whitespace-nowrap">
+                      <span className="font-normal text-gray-900">Lam</span>
+                      <span className="font-bold text-gray-900">Gig</span>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="logo"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src="/logo.svg"
+                      alt="LamGig Logo"
+                      width={32}
+                      height={32}
+                      className="rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </NavbarBrand>
         </div>
