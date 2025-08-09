@@ -14,7 +14,9 @@ import {
   CheckCircle2,
   Clock,
   Shield,
-  Sparkles
+  Sparkles,
+  MessageCircle,
+  Star
 } from "lucide-react";
 import { 
   Button, 
@@ -22,9 +24,7 @@ import {
   Textarea, 
   Card, 
   CardBody,
-  Chip,
-  RadioGroup,
-  Radio
+  Chip
 } from "@heroui/react";
 import { pricingPackages } from "@/components/PriceSection/pricingData";
 
@@ -210,110 +210,177 @@ export const StartProjectForm = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="space-y-6"
+                  className="space-y-4"
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                    Choose Your Package
-                  </h2>
+                  {/* Compact Header */}
+                  <div className="text-center">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-1">
+                      Choose Your Package
+                    </h2>
+                    <p className="text-sm text-gray-600">
+                      Select the best fit for your business
+                    </p>
+                  </div>
 
-                  <RadioGroup
-                    value={formData.package || ""}
-                    onValueChange={(value) => setFormData({ ...formData, package: value as "standard" | "enterprise" })}
-                  >
-                    <div className="space-y-4">
-                      {/* Standard Package */}
-                      <Card 
+                  {/* Compact Toggle Buttons */}
+                  <div className="flex gap-2 p-1 bg-gray-100 rounded-lg">
+                    <button
+                      onClick={() => setFormData({ ...formData, package: "standard" })}
+                      className={`
+                        flex-1 py-2 px-3 rounded-md font-medium text-sm transition-all cursor-pointer
+                        ${formData.package === "standard"
+                          ? 'bg-white text-primary shadow-sm'
+                          : 'text-gray-600 hover:text-gray-900'
+                        }
+                      `}
+                    >
+                      <div className="flex items-center justify-center gap-2">
+                        {pricingPackages.standard.isPopular && (
+                          <Star className="w-3.5 h-3.5 fill-current" />
+                        )}
+                        Standard
+                      </div>
+                    </button>
+                    <button
+                      onClick={() => setFormData({ ...formData, package: "enterprise" })}
+                      className={`
+                        flex-1 py-2 px-3 rounded-md font-medium text-sm transition-all
+                        ${formData.package === "enterprise"
+                          ? 'bg-gray-900 text-white shadow-sm'
+                          : 'text-gray-600 hover:text-gray-900'
+                        }
+                      `}
+                    >
+                      Enterprise
+                    </button>
+                  </div>
+
+                  {/* Package Details Card */}
+                  <AnimatePresence mode="wait">
+                    {formData.package && (
+                      <motion.div
+                        key={formData.package}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
                         className={`
-                          border-2 transition-all duration-300 cursor-pointer
-                          ${formData.package === "standard" 
-                            ? 'border-primary bg-blue-50/30' 
-                            : 'border-gray-200 hover:border-gray-300'
+                          rounded-xl p-5 border-2
+                          ${formData.package === "standard"
+                            ? 'border-primary bg-gradient-to-br from-blue-50/50 to-white'
+                            : 'border-gray-800 bg-gradient-to-br from-gray-900 to-gray-800'
                           }
                         `}
                       >
-                        <CardBody className="p-6">
-                          <Radio value="standard" className="w-full">
-                            <div className="flex-1 ml-2">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xl font-semibold text-gray-900">
+                        {formData.package === "standard" ? (
+                          <>
+                            {/* Standard Package Content */}
+                            <div className="flex items-start justify-between mb-3">
+                              <div>
+                                <h3 className="text-xl font-bold text-gray-900">
                                   {pricingPackages.standard.name}
                                 </h3>
-                                {pricingPackages.standard.isPopular && (
-                                  <Chip size="sm" className="bg-primary text-white">
-                                    Most Popular
-                                  </Chip>
-                                )}
+                                <p className="text-sm text-gray-600 mt-1">
+                                  {pricingPackages.standard.descriptionShort}
+                                </p>
                               </div>
-                              <p className="text-gray-600 mb-3">
-                                {pricingPackages.standard.descriptionShort}
-                              </p>
-                              <div className="flex items-baseline gap-2 mb-3">
-                                <span className="text-3xl font-bold text-primary">
-                                  {pricingPackages.standard.price}
-                                </span>
-                                <span className="text-gray-600">
-                                  {pricingPackages.standard.priceUnit}
-                                </span>
-                                <span className="text-sm text-gray-500">
-                                  {pricingPackages.standard.yearlyPriceShort}
-                                </span>
-                              </div>
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                {pricingPackages.standard.features.slice(0, 4).map((feature, index) => (
-                                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                                    <span>{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
+                              {pricingPackages.standard.isPopular && (
+                                <Chip 
+                                  size="sm"
+                                  className="bg-green-100 text-green-700 font-medium"
+                                >
+                                  Popular
+                                </Chip>
+                              )}
                             </div>
-                          </Radio>
-                        </CardBody>
-                      </Card>
 
-                      {/* Enterprise Package */}
-                      <Card 
-                        className={`
-                          border-2 transition-all duration-300 cursor-pointer
-                          ${formData.package === "enterprise" 
-                            ? 'border-primary bg-blue-50/30' 
-                            : 'border-gray-200 hover:border-gray-300'
-                          }
-                        `}
-                      >
-                        <CardBody className="p-6">
-                          <Radio value="enterprise" className="w-full">
-                            <div className="flex-1 ml-2">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xl font-semibold text-gray-900">
+                            {/* Price */}
+                            <div className="flex items-baseline gap-2 mb-4">
+                              <span className="text-3xl font-bold text-gray-900">
+                                {pricingPackages.standard.price}
+                              </span>
+                              <span className="text-gray-600">
+                                {pricingPackages.standard.priceUnit}
+                              </span>
+                              <span className="text-xs text-gray-500">
+                                • {pricingPackages.standard.yearlyPriceShort}
+                              </span>
+                            </div>
+
+                            {/* Key Features - Compact */}
+                            <div className="grid grid-cols-2 gap-2 mb-4">
+                              {pricingPackages.standard.features.slice(0, 4).map((feature, index) => (
+                                <div key={index} className="flex items-start gap-1.5">
+                                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                                  <span className="text-xs text-gray-600 leading-tight">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            {/* Enterprise Package Content */}
+                            <div className="flex items-start justify-between mb-3">
+                              <div>
+                                <h3 className="text-xl font-bold text-white">
                                   {pricingPackages.enterprise.name}
                                 </h3>
+                                <p className="text-sm text-gray-300 mt-1">
+                                  {pricingPackages.enterprise.descriptionShort}
+                                </p>
                               </div>
-                              <p className="text-gray-600 mb-3">
-                                {pricingPackages.enterprise.descriptionShort}
-                              </p>
-                              <div className="flex items-baseline gap-2 mb-3">
-                                <span className="text-3xl font-bold text-primary">
-                                  {pricingPackages.enterprise.price}
-                                </span>
-                                <span className="text-sm text-gray-500">
-                                  {pricingPackages.enterprise.yearlyPriceShort}
-                                </span>
-                              </div>
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                {pricingPackages.enterprise.features.slice(0, 4).map((feature, index) => (
-                                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                                    <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                                    <span>{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
+                              <MessageCircle className="w-5 h-5 text-blue-400" />
                             </div>
-                          </Radio>
-                        </CardBody>
-                      </Card>
+
+                            {/* Price */}
+                            <div className="flex items-baseline gap-2 mb-4">
+                              <span className="text-3xl font-bold text-white">
+                                {pricingPackages.enterprise.price}
+                              </span>
+                              <span className="text-xs text-gray-400">
+                                • {pricingPackages.enterprise.yearlyPriceShort}
+                              </span>
+                            </div>
+
+                            {/* Key Features - Compact */}
+                            <div className="grid grid-cols-2 gap-2 mb-4">
+                              {pricingPackages.enterprise.features.slice(0, 4).map((feature, index) => (
+                                <div key={index} className="flex items-start gap-1.5">
+                                  <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                                  <span className="text-xs text-gray-300 leading-tight">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  {/* Default Selection Prompt */}
+                  {!formData.package && (
+                    <div className="text-center py-8 px-4 bg-gray-50 rounded-xl border border-gray-200">
+                      <Package className="w-10 h-10 text-gray-400 mx-auto mb-3" />
+                      <p className="text-gray-600 font-medium">Select a package to see details</p>
+                      <p className="text-sm text-gray-500 mt-1">Tap on Standard or Enterprise above</p>
                     </div>
-                  </RadioGroup>
+                  )}
+
+                  {/* Trust Indicators - Compact */}
+                  <div className="flex items-center justify-center gap-4 text-xs text-gray-500 pt-2">
+                    <div className="flex items-center gap-1">
+                      <Shield className="w-3.5 h-3.5" />
+                      <span>Secure</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>Cancel anytime</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span>24/7 support</span>
+                    </div>
+                  </div>
                 </motion.div>
               )}
 

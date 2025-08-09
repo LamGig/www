@@ -28,10 +28,10 @@ export const pricingPackages = {
     descriptionShort: "For unique business requirements",
     features: [
       "Completely custom app development",
-      "UI/UX design",
+      "Custom UI/UX design",
       "Advanced integrations (POS, CRM, etc.)",
-      "Custom backend architecture",
       "Source code ownership",
+      "Custom backend architecture",
       "Priority support & SLAs",
       "Dedicated project manager & dev",
       "QA from third-party firm"
