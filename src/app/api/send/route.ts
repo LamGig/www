@@ -1,4 +1,4 @@
-import { BasicEmailTemplate } from '@/components/EmailTemplates/BasicEmailTemplate';
+import { BasicEmailTemplate } from '@/components/email-template/BasicEmailTemplate';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);

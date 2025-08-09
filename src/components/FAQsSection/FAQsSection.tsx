@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, HelpCircle, Sparkles } from "lucide-react";
+import { Chip } from "@heroui/react";
 import { faqData, type FAQItem, type FAQSection } from "./faqData";
 
 const AccordionItem = ({ item, isOpen, onToggle }: { 
@@ -14,14 +15,14 @@ const AccordionItem = ({ item, isOpen, onToggle }: {
     <div className="border border-gray-200 rounded-xl overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+        className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between cursor-pointer"
       >
         <span className="font-semibold text-black text-lg">{item.question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className={`w-5 h-5 ${isOpen ? 'text-primary' : 'text-gray-500'}`} />
         </motion.div>
       </button>
       
@@ -69,10 +70,10 @@ const StickyNavigation = ({ sections, activeSection }: {
         <button
           key={section.id}
           onClick={() => scrollToSection(section.id)}
-          className={`block w-full text-left px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+          className={`block w-full text-left px-3 py-2 text-sm rounded-lg cursor-pointer transition-all duration-200 ${
             activeSection === section.id
-              ? 'bg-black text-white font-medium'
-              : 'text-gray-600 hover:text-black hover:bg-gray-100'
+              ? 'bg-primary text-white font-medium'
+              : 'text-gray-600 hover:text-primary hover:bg-gray-100'
           }`}
         >
           {section.title}
@@ -98,7 +99,9 @@ const FAQSection = ({ section }: { section: FAQSection }) => {
   return (
     <div id={section.id} className="space-y-4 scroll-mt-32">
       <h2 className="text-2xl font-bold text-black mb-6 flex items-center">
-        <HelpCircle className="w-6 h-6 mr-2" />
+        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+          <HelpCircle className="w-5 h-5 text-primary" />
+        </div>
         {section.title}
       </h2>
       <div className="space-y-3">
@@ -165,15 +168,36 @@ export const FAQsSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 space-y-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-black text-sm font-medium text-white mb-4">
-            Support & Help
-          </div>
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-black">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <Chip
+              startContent={<Sparkles className="w-3.5 h-3.5" />}
+              variant="flat"
+              className="bg-blue-50 border border-blue-200 text-primary font-medium"
+            >
+              Support & Help Center
+            </Chip>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900"
+          >
+            Frequently Asked <span className="text-primary">Questions</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"
+          >
             Get answers to common questions about our services, billing, talent, and project management process.
-          </p>
+          </motion.p>
         </div>
 
         <div className="flex gap-12">

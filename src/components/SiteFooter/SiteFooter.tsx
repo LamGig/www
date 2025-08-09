@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Link } from "@heroui/react";
 
-export const Footer = () => {
+export const SiteFooter = () => {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center space-y-3 sm:items-start">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.svg"
+                src="/logo-white.svg"
                 alt="LamGig Logo"
                 width={30}
                 height={30}

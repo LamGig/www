@@ -16,41 +16,41 @@ export const faqData: FAQSection[] = [
     items: [
       {
         question: "What is LamGig?",
-        answer: "LamGig is a platform that connects you with pre-vetted, top-tier talent for your projects. We handle the recruitment, vetting, talent, and project management so you can focus on your business goals."
+        answer: "LamGig is a complete mobile app platform for small businesses. We provide professional iOS and Android apps with a backend, CMS, and hosting - all for one flat monthly fee of $400 or $4000/year."
       },
       {
-        question: "How are you different from other platforms?",
-        answer: "We provide rigorous talent vetting, complete project management, and match you with only the best candidates. Unlike other platforms, we don't make you sift through hundreds of profiles and interviews; we simply deliver quality matches. Also, unlike other platforms where you have to hunt down the status of your project, we update you on its progress daily."
+        question: "How are you different from other app builders?",
+        answer: "Unlike DIY app builders, we handle everything for you - from customization to app store submission. You get a professional, white-labeled app without any technical work. Our apps are built with real native code, not web wrappers."
       },
       {
-        question: "What's the minimum project duration?",
-        answer: "To ensure high-quality delivery and proper project development, our minimum engagement is 2 weeks, with most projects exceeding 3 months. Additionally, we offer 2 months free for annual contracts."
+        question: "How quickly can I get my app?",
+        answer: "Standard Package apps are typically live within 7 days. This includes customization, app store submission, and CMS setup. Enterprise custom apps take 4-12 weeks depending on complexity."
       },
       {
-        question: "Do I own the intellectual property?",
-        answer: "Yes! You retain full ownership of all intellectual property created during your project. Our terms of service clearly cover this protection."
+        question: "Do I own the app?",
+        answer: "Yes! You own your brand, content, and customer data. The app is published under your developer account. For Enterprise packages, you also receive the source code."
       },
       {
-        question: "What technologies do you support?",
-        answer: "We specialize in JavaScript, React, React Native, including website and web app development, and mobile app development."
+        question: "What types of businesses do you serve?",
+        answer: "We serve restaurants, retail stores, service businesses, fitness studios, salons, professional services, and any small business that wants to engage customers through a mobile app."
       }
     ]
   },
   {
-    title: "Talent & Team",
-    id: "talent",
+    title: "Features & Technology",
+    id: "features",
     items: [
       {
-        question: "How do you vet your talent?",
-        answer: "Our 5-stage vetting process includes CV and portfolio review, background verification, technical assessments, and in-person interviews."
+        question: "What features are included?",
+        answer: "Standard apps include: push notifications, user accounts, product/service catalogs, booking systems, payment processing, loyalty programs, analytics, and a custom CMS to manage everything."
       },
       {
-        question: "What's the experience level of your talent?",
-        answer: "All our professionals have a minimum of 2 years of experience, with an average of 4-6 years."
+        question: "Can I update content myself?",
+        answer: "Absolutely! Our custom CMS lets you update products, prices, images, promotions, and content in real-time without any coding. Changes appear instantly in your app."
       },
       {
-        question: "Where are your team members located?",
-        answer: "Our talent is primarily located in Vietnam at this time. Our CTO is in the USA; he is a senior developer with over a decade of experience."
+        question: "What about app store requirements?",
+        answer: "We handle all app store submissions and requirements. We ensure your app meets Apple and Google guidelines and manage the entire approval process for you."
       }
     ]
   },
@@ -59,42 +59,42 @@ export const faqData: FAQSection[] = [
     id: "billing",
     items: [
       {
-        question: "How does billing work?",
-        answer: "We use a two-part billing system: an initial deposit for project setup and regular monthly payments. Any unused funds are refunded at project completion."
+        question: "What's included in the $400/month Standard Package?",
+        answer: "Everything you need: iOS & Android apps, backend infrastructure, hosting, CMS access, app store submissions, maintenance, updates, and ongoing support."
       },
       {
-        question: "When will I be charged?",
-        answer: "Monthly billing occurs on the last day of each month. For weekly arrangements, billing happens every Tuesday based on reported hours from the previous week."
+        question: "How much can I save with annual billing?",
+        answer: "Annual billing is $4000/year - that's $800 in savings (2 months free). It's our most popular option for businesses committed to mobile growth."
       },
       {
         question: "What payment methods do you accept?",
-        answer: "We accept ACH direct debit and credit cards processed through Stripe for secure, reliable payments."
+        answer: "We accept ACH direct debit and credit cards processed through Stripe for secure, reliable payments. Monthly billing occurs on the same date each month."
       },
       {
-        question: "Are there any upfront fees?",
-        answer: "We require a deposit (pre-payment) that gets applied to your project costs. This deposit is fully refundable if not used."
+        question: "Are there any setup fees?",
+        answer: "No setup fees for Standard Package! The $400/month (or $4000/year) covers everything. Enterprise custom projects are quoted individually based on requirements."
       },
       {
-        question: "What happens to unused budget?",
-        answer: "Any remaining balance from your deposit will be transferred back to your original payment method after project completion."
+        question: "Can I cancel anytime?",
+        answer: "Yes, monthly plans can be cancelled anytime with 30 days notice. Annual plans are commitment-based but include significant savings."
       }
     ]
   },
   {
-    title: "Project Management",
-    id: "project-management",
+    title: "Support & Maintenance",
+    id: "support",
     items: [
       {
-        question: "Do you provide project estimates?",
-        answer: "Yes! We provide detailed hour estimates based on your project requirements and scope. Our experienced team helps you plan realistic timelines and budgets."
+        question: "What support do you provide?",
+        answer: "We provide 24/7 technical support, CMS training, regular app updates, bug fixes, OS compatibility updates, and ongoing maintenance - all included in your subscription."
       },
       {
-        question: "How do you ensure project quality?",
-        answer: "We provide daily updates, regular check-ins, and comprehensive project monitoring. Our project managers ensure deliverables meet your standards and deadlines."
+        question: "What if I need custom features later?",
+        answer: "You can add custom features anytime. Simple additions are often included in your plan. Complex features may require upgrading to Enterprise or a one-time development fee."
       },
       {
-        question: "What if I'm not satisfied with the work?",
-        answer: "We offer a zero-risk guarantee. If you're not satisfied within the first week, we'll find you a replacement team at no additional cost."
+        question: "Do you handle app updates?",
+        answer: "Yes! We handle all technical updates including OS compatibility, security patches, and app store requirement changes. Your app always stays current and compliant."
       }
     ]
   }

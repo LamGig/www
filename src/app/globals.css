@@ -7,13 +7,10 @@
 /* #END HeroUI */
 
 :root {
+  /* --primary: #0072f5; */ /* already defined in HeroUI as "primary", just putting it here as a note */
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #171717;
   scroll-behavior: smooth;
-}
-
-@theme {
-  --color-black: #111;
 }
 
 @theme inline {
@@ -23,15 +20,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #111111;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }

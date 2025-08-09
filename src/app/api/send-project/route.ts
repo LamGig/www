@@ -1,4 +1,4 @@
-import { ProjectSubmissionTemplate } from '@/components/EmailTemplates/ProjectSubmissionTemplate';
+import { StartProjectEmailTemplate } from '@/components/email-template/start-project-email-template';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -6,12 +6,22 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firstname, lastname, email, phonenumber, prompt } = body;
+    
+    const { 
+      package: selectedPackage,
+      businessDescription,
+      projectNeeds,
+      firstName,
+      lastName,
+      company,
+      email,
+      phone
+    } = body;
 
     // Validate required fields
-    if (!email || !prompt) {
+    if (!email || !firstName || !lastName || !businessDescription || !projectNeeds || !selectedPackage) {
       return Response.json(
-        { error: 'Email and project description are required' }, 
+        { error: 'Missing required fields' }, 
         { status: 400 }
       );
     }
@@ -19,13 +29,16 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: 'LamGig <noreply@updatemail.lamgig.com>',
       to: ['nhat@lamgig.com'],
-      subject: `New Project Request from ${email}`,
-      react: ProjectSubmissionTemplate({
-        firstname: firstname || '',
-        lastname: lastname || '',
+      subject: `New ${selectedPackage === 'enterprise' ? 'Enterprise' : 'Standard'} Project Request from ${firstName} ${lastName}`,
+      react: StartProjectEmailTemplate({
+        package: selectedPackage,
+        businessDescription,
+        projectNeeds,
+        firstName,
+        lastName,
+        company,
         email,
-        phonenumber: phonenumber || '',
-        prompt
+        phone
       }),
     });
 

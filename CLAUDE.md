@@ -3,53 +3,99 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-
-This is a marketing website for LamGig.com built with Next.js 15, React 19, and Tailwind CSS v4. The project uses HeroUI React components (beta version) for the UI library.
+LamGig is a Next.js 15 marketing website for a mobile app development service. It features a multi-step project submission form that sends client inquiries via Resend API.
 
 ## Development Commands
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build production application
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+```bash
+# Start development server (uses Turbopack for faster builds)
+npm run dev
 
-## Architecture
+# Build for production
+npm run build
 
-### Tech Stack
-- **Framework**: Next.js 15 with App Router
-- **React**: Version 19
-- **Styling**: Tailwind CSS v4 with PostCSS
-- **UI Components**: HeroUI React (beta version)
-- **TypeScript**: Full TypeScript support with strict mode
+# Start production server
+npm start
 
-### Project Structure
-```
-src/
-├── app/                 # Next.js App Router pages
-│   ├── page.tsx        # Homepage
-│   ├── layout.tsx      # Root layout with fonts
-│   └── globals.css     # Global styles
-└── components/         # React components
-    ├── SiteHeader/     # Header component
-    ├── SiteFooter/     # Footer component
-    └── HeroSection/    # Hero section component
-    └── ui/             # Custom UI components
+# Run ESLint
+npm run lint
 ```
 
-### Key Configuration
-- Uses `@/*` path aliases for imports (configured in tsconfig.json)
-- Tailwind CSS v4 with PostCSS plugin
-- Geist Sans and Geist Mono fonts from Google Fonts
-- Turbopack for fast development builds
+## Architecture & Tech Stack
 
-### Component Architecture
-- Components are organized in folders with index.ts exports
-- Uses HeroUI components (Navbar, Button, Link, etc.)
-- TypeScript interfaces for props and component definitions
+### Core Framework
+- **Next.js 15** with App Router architecture
+- **TypeScript** with strict mode enabled
+- **React 19** with concurrent features
+- **Tailwind CSS 4** for styling (via @tailwindcss/postcss)
 
-## Important Notes
+### UI Framework & Components
+- **HeroUI (@heroui/react)** as primary UI component library
+- **Framer Motion** for animations and transitions
+- **Lucide React** for iconography
+- No React Hook Form - forms use controlled components with useState
 
-- The project uses Tailwind CSS v4 which has different configuration than v3
-- HeroUI React is in beta version due to Next.js Tailwind v4 compatibility
-- Uses App Router pattern for routing and layouts
-- Site has max-width of `max-w-7xl`
+### Email Service
+- **Resend** API for sending emails
+- Email templates using React components
+- API endpoint: `/api/send-project`
+- Environment variable: `RESEND_API_KEY`
+- Sends to: `nhat@lamgig.com`
+- From address: `noreply@updatemail.lamgig.com`
+
+### Key Components
+
+#### StartProjectForm (`/src/components/StartProjectForm/StartProjectForm.tsx`)
+- Multi-step form flow: package selection → business details → contact info
+- Form state managed with useState
+- Package pre-selection via URL query parameter (`?package=standard|enterprise`)
+- Email validation with regex: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
+- API submission to `/api/send-project` endpoint
+- Animated success state with thank you message
+- Loading overlay during submission
+- Error handling with user-friendly messages
+
+#### HeroSection (`/src/components/HeroSection/HeroSection.tsx`)
+- Animated text reveals using Framer Motion with stagger effects
+- Feature cards with hover animations
+- Trust indicators (pricing, timeline, support)
+- Background pattern with gradient orbs
+- Links to `/start` for main CTA
+
+### API Routes
+
+#### `/api/send-project`
+- Accepts POST requests with project submission data
+- Required fields: email, firstName, lastName, businessDescription, projectNeeds, selectedPackage
+- Optional fields: company, phone
+- Uses Resend SDK to send formatted email
+- Returns success/error JSON response
+
+### Styling Patterns
+- Tailwind CSS with custom color scheme
+- Primary color accessed via `text-primary`, `bg-primary`
+- HeroUI component customization via `classNames` prop
+- Consistent animation durations (0.2s, 0.3s, 0.6s)
+- Border radius patterns: `rounded-lg`, `rounded-xl`, `rounded-2xl`
+- Shadow patterns for depth
+- Responsive breakpoints: `sm:`, `md:`, `lg:`
+
+### Animation Patterns
+- Framer Motion for complex animations
+- Container/item pattern for staggered reveals
+- Spring animations for natural motion
+- Scale transforms on hover
+- Path animations for SVG elements
+- AnimatePresence for exit animations
+
+### TypeScript Configuration
+- Strict mode enabled
+- Target: ES2017
+- Module resolution: bundler
+- Path alias: `@/*` maps to `./src/*`
+- JSX: preserve (for Next.js optimization)
+
+### Font Setup
+- Geist Sans for body text (`--font-geist-sans`)
+- Geist Mono for code (`--font-geist-mono`)
+- Applied via CSS variables in layout.tsx
