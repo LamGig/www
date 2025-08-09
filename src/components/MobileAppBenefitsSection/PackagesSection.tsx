@@ -33,15 +33,16 @@ export const PackagesSection = () => {
     {
       name: "Standard Package",
       price: "$400/month",
-      yearlyPrice: "$4000/year",
+      yearlyPrice: "or $4000/year",
       description: "Perfect for getting started quickly",
       features: [
-        "Professional mobile app ready to launch",
-        "Choose from our premium templates",
-        "Full white-label customization",
-        "Custom CMS for easy content updates",
-        "Robust backend infrastructure",
-        "Save $800 with yearly plan"
+        "iOS & Android apps",
+        "White-labeled with your branding",
+        "Custom CMS for content management",
+        "Backend infrastructure & hosting",
+        "App store submission & approval",
+        "Regular updates & maintenance",
+        "24/7 technical support"
       ],
       highlight: true
     },
@@ -52,11 +53,13 @@ export const PackagesSection = () => {
       description: "For unique business requirements",
       features: [
         "Completely custom app development",
-        "Bespoke design from scratch",
-        "Advanced feature integration",
-        "Dedicated development team",
-        "Priority support & maintenance",
-        "Scalable architecture"
+        "UI/UX design",
+        "Advanced integrations (POS, CRM, etc.)",
+        "Custom backend architecture",
+        "Source code ownership",
+        "Priority support & SLAs",
+        "Dedicated project manager & dev",
+        "QA from third-party firm"
       ],
       highlight: false
     }
@@ -126,7 +129,7 @@ export const PackagesSection = () => {
               <h4 className="text-2xl font-bold text-gray-900 mb-2 mt-2">{pkg.name}</h4>
               <div className="mb-4">
                 <p className="text-3xl font-bold text-gray-900">{pkg.price}</p>
-                <p className="text-gray-500 text-sm">or {pkg.yearlyPrice}</p>
+                <p className="text-gray-500 text-sm">{pkg.yearlyPrice}</p>
               </div>
               <p className="text-gray-600 mb-6">{pkg.description}</p>
               <ul className="space-y-3 flex-grow">
