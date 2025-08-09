@@ -96,7 +96,7 @@ export const MobileAppBenefitsSection = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative py-32 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_40%,transparent_100%)]" />
       
@@ -124,7 +124,7 @@ export const MobileAppBenefitsSection = () => {
           </motion.div>
           <motion.h2 
             variants={itemAnimation}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-xl"
           >
             Why Your Business Needs a <span className="text-primary">Mobile App</span>
           </motion.h2>
@@ -186,7 +186,7 @@ export const MobileAppBenefitsSection = () => {
             <Chip 
               startContent={<CheckCircle className="w-3.5 h-3.5" />}
               variant="flat"
-              className="bg-green-50 border border-green-200 text-green-700 font-medium"
+              className="bg-blue-50 border border-blue-200 text-primary font-medium"
             >
               Flexible Pricing Options
             </Chip>

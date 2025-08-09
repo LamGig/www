@@ -64,11 +64,11 @@ export const HeroSection = () => {
             variants={itemAnimation}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6"
           >
-            Your Mobile App
+            Custom Mobile App 
             <br />
             <span className="relative">
               <span className="text-primary">
-                Live in Days
+                 Without the Hassle
               </span>
               <svg className="absolute -bottom-2 left-0 w-full" height="6" viewBox="0 0 300 6" fill="none">
                 <motion.path 
@@ -93,7 +93,7 @@ export const HeroSection = () => {
             variants={itemAnimation}
             className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10"
           >
-            Boost sales, retain customers, and grow faster with a mobile app, made easy with our Standard or Enterprise packages.
+            Stop waiting months and paying a fortune for a custom app. We can gets you to market fast with a professional mobile app that boosts sales and customer loyalty.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -146,8 +146,10 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-7 h-7 text-white" />
+              <div className="flex justify-center">
+                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">White-Label Ready</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -160,8 +162,10 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Code2 className="w-7 h-7 text-white" />
+              <div className="flex justify-center">
+                <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Code2 className="w-7 h-7 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Complete Platform</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -174,8 +178,10 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-7 h-7 text-white" />
+              <div className="flex justify-center">
+                <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-7 h-7 text-white" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">No Hidden Costs</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -184,33 +190,6 @@ export const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Stats section */}
-          <motion.div 
-            variants={containerAnimation}
-            className="mt-20 pt-12 border-t border-gray-200"
-          >
-            <motion.div 
-              variants={itemAnimation}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            >
-              <div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
-                <div className="text-gray-600">Apps Launched</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">7 Days</div>
-                <div className="text-gray-600">Average Launch</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">$800</div>
-                <div className="text-gray-600">Annual Savings</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">24/7</div>
-                <div className="text-gray-600">Support Available</div>
-              </div>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
