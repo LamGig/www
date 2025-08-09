@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { Chip, Button } from "@heroui/react";
+import { pricingPackages } from "./pricingData";
 
 export const PriceSectionSimple = () => {
   const containerAnimation = {
@@ -29,39 +30,24 @@ export const PriceSectionSimple = () => {
     }
   };
 
+  const { standard, enterprise } = pricingPackages;
+  
   const packages = [
     {
-      name: "Standard Package",
-      price: "$400/month",
-      yearlyPrice: "or $4000/year",
-      description: "Perfect for getting started quickly",
-      features: [
-        "iOS & Android apps",
-        "White-labeled with your branding",
-        "Custom CMS for content management",
-        "Backend infrastructure & hosting",
-        "App store submission & approval",
-        "Regular updates & maintenance",
-        "24/7 technical support"
-      ],
-      highlight: true
+      name: `${standard.name} Package`,
+      price: `${standard.price}${standard.priceUnit}`,
+      yearlyPrice: standard.yearlyPriceShort,
+      description: standard.descriptionShort,
+      features: standard.features,
+      highlight: standard.isPopular
     },
     {
-      name: "Enterprise Package",
-      price: "Custom pricing",
-      yearlyPrice: "Contact for quote",
-      description: "For unique business requirements",
-      features: [
-        "Completely custom app development",
-        "UI/UX design",
-        "Advanced integrations (POS, CRM, etc.)",
-        "Custom backend architecture",
-        "Source code ownership",
-        "Priority support & SLAs",
-        "Dedicated project manager & dev",
-        "QA from third-party firm"
-      ],
-      highlight: false
+      name: `${enterprise.name} Package`,
+      price: `${enterprise.price} pricing`,
+      yearlyPrice: enterprise.yearlyPriceShort,
+      description: enterprise.descriptionShort,
+      features: enterprise.features,
+      highlight: enterprise.isPopular
     }
   ];
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
 import { CheckCircle2, Sparkles, ArrowRight, MessageCircle, Zap, Shield, Users, Code2, Clock, HeartHandshake } from "lucide-react";
 import Link from "next/link";
+import { pricingPackages } from "./pricingData";
 
 export const PriceSection = () => {
   const containerAnimation = {
@@ -30,26 +31,7 @@ export const PriceSection = () => {
     }
   };
 
-  const standardFeatures = [
-    "iOS & Android apps",
-    "White-labeled with your branding",
-    "Custom CMS for content management",
-    "Backend infrastructure & hosting",
-    "App store submission & approval",
-    "Regular updates & maintenance",
-    "24/7 technical support"
-  ];
-
-  const enterpriseFeatures = [
-    "Completely custom app development",
-    "UI/UX design",
-    "Advanced integrations (POS, CRM, etc.)",
-    "Custom backend architecture",
-    "Source code ownership",
-    "Priority support & SLAs",
-    "Dedicated project manager & dev",
-    "QA from third-party firm"
-  ];
+  const { standard, enterprise } = pricingPackages;
 
   return (
     <section className="relative py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
@@ -108,22 +90,24 @@ export const PriceSection = () => {
           >
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-gray-900">Standard</h3>
-                <Chip 
-                  size="sm"
-                  variant="flat"
-                  className="bg-green-50 border border-green-200 text-green-600 font-medium"
-                >
-                  Most Popular
-                </Chip>
+                <h3 className="text-2xl font-bold text-gray-900">{standard.name}</h3>
+                {standard.isPopular && (
+                  <Chip 
+                    size="sm"
+                    variant="flat"
+                    className="bg-green-50 border border-green-200 text-green-600 font-medium"
+                  >
+                    Most Popular
+                  </Chip>
+                )}
               </div>
-              <p className="text-gray-600 mb-6">Perfect for small businesses ready to go mobile</p>
+              <p className="text-gray-600 mb-6">{standard.description}</p>
               
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-gray-900">$400</span>
-                <span className="text-gray-600">/month</span>
+                <span className="text-5xl font-bold text-gray-900">{standard.price}</span>
+                <span className="text-gray-600">{standard.priceUnit}</span>
               </div>
-              <p className="text-sm text-gray-500">or $4,000/year (save $800)</p>
+              <p className="text-sm text-gray-500">{standard.yearlyPrice}</p>
             </div>
 
             <Button
@@ -137,7 +121,7 @@ export const PriceSection = () => {
             <div className="space-y-4">
               <p className="text-sm font-semibold text-gray-700 uppercase tracking-wider">What's included:</p>
               <ul className="space-y-3">
-                {standardFeatures.map((feature, index) => (
+                {standard.features.map((feature, index) => (
                   <motion.li 
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
@@ -162,14 +146,14 @@ export const PriceSection = () => {
 
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-white">Enterprise</h3>
+                <h3 className="text-2xl font-bold text-white">{enterprise.name}</h3>
               </div>
-              <p className="text-gray-300 mb-6">Fully custom apps for unique business needs</p>
+              <p className="text-gray-300 mb-6">{enterprise.description}</p>
               
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-5xl font-bold text-white">Custom</span>
+                <span className="text-5xl font-bold text-white">{enterprise.price}</span>
               </div>
-              <p className="text-sm text-gray-400">Tailored to your needs</p>
+              <p className="text-sm text-gray-400">{enterprise.yearlyPrice}</p>
             </div>
 
             <Button
@@ -183,7 +167,7 @@ export const PriceSection = () => {
             <div className="space-y-4">
               <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider">Everything in Standard, plus:</p>
               <ul className="space-y-3">
-                {enterpriseFeatures.map((feature, index) => (
+                {enterprise.features.map((feature, index) => (
                   <motion.li 
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
