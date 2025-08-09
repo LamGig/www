@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { Chip, Button } from "@heroui/react";
 
-export const PackagesSection = () => {
+export const PriceSectionSimple = () => {
   const containerAnimation = {
     hidden: { opacity: 0 },
     show: {
@@ -66,7 +66,7 @@ export const PackagesSection = () => {
   ];
 
   return (
-    <>
+    <section className="relative py-20">
       <motion.div
         className="text-center mb-16"
         initial="hidden"
@@ -98,7 +98,7 @@ export const PackagesSection = () => {
       </motion.div>
 
       <motion.div 
-        className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-24"
+        className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
@@ -155,6 +155,6 @@ export const PackagesSection = () => {
           </motion.div>
         ))}
       </motion.div>
-    </>
+    </section>
   );
 };

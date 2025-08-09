@@ -52,7 +52,7 @@ export const PriceSection = () => {
   ];
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
       

@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import { Smartphone, TrendingUp, Users, Star, Clock, DollarSign, Sparkles } from "lucide-react";
 import { Chip } from "@heroui/react";
-import { PackagesSection } from "./PackagesSection";
-import { CTASection } from "./CTASection";
 
 export const MobileAppBenefitsSection = () => {
   const containerAnimation = {
@@ -66,7 +64,7 @@ export const MobileAppBenefitsSection = () => {
 
 
   return (
-    <section id="mobileappbenefits" className="relative py-32 overflow-hidden">
+    <section id="mobileappbenefits" className="relative py-20 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_40%,transparent_100%)]" />
       
@@ -109,7 +107,7 @@ export const MobileAppBenefitsSection = () => {
 
         {/* Benefits grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
@@ -143,12 +141,6 @@ export const MobileAppBenefitsSection = () => {
             );
           })}
         </motion.div>
-
-        {/* Packages section */}
-        <PackagesSection />
-
-        {/* CTA section */}
-        <CTASection />
       </div>
     </section>
   );

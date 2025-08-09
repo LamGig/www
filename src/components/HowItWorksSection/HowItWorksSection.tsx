@@ -39,7 +39,7 @@ export const HowItWorksSection = () => {
   };
 
   return (
-    <section id="how-it-works" ref={sectionRef} className="relative py-32 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="relative py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]" />
       
