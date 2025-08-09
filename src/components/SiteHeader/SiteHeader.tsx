@@ -134,7 +134,7 @@ export const SiteHeader = () => {
           <NavbarItem>
             <Button 
               as={Link} 
-              href="/start-project" 
+              href="/start" 
               variant="solid"
               className="bg-primary text-white hover:bg-primary/90 transition-all duration-300 font-semibold h-10 px-4 rounded-lg group"
             >

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
 import { ArrowRight, Users, Code2, Shield, Sparkles, CheckCircle2, Clock, Eye } from "lucide-react";
+import Link from "next/link";
 
 export const HeroSection = () => {
   const containerAnimation = {
@@ -102,19 +103,21 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <Button
+              as={Link}
+              href="/start"
               size="lg"
               className="bg-primary text-white px-8 py-6 text-lg font-semibold hover:bg-primary/90 transition-all duration-300"
               endContent={<ArrowRight className="w-5 h-5 ml-1" />}
             >
               Get Your App Now
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="bordered"
               className="border-2 border-gray-300 text-gray-700 px-8 py-6 text-lg font-semibold hover:border-gray-400 transition-all duration-300"
             >
               View Samples
-            </Button>
+            </Button> */}
           </motion.div>
 
           {/* Trust indicators */}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 export const CTASection = () => {
   return (
@@ -22,6 +23,8 @@ export const CTASection = () => {
             Join hundreds of small businesses that have increased their revenue with a professional mobile app
           </p>
           <Button
+            as={Link}
+            href="/start"
             size="lg"
             className="bg-white text-primary px-8 py-6 text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
             endContent={<ArrowRight className="w-5 h-5 ml-1" />}
