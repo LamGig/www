@@ -13,8 +13,7 @@ export const CTASection = () => {
       viewport={{ once: true }}
       className="relative"
     >
-      <div className="bg-gradient-to-r from-primary to-blue-600 rounded-3xl p-12 text-center shadow-2xl shadow-blue-500/20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]" />
+      <div className="bg-gray-950 p-12 text-center overflow-hidden">
         <div className="relative z-10">
           <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?

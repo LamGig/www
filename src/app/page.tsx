@@ -4,6 +4,7 @@ import { MobileAppBenefitsSection } from "@/components/MobileAppBenefitsSection"
 import { PriceSectionSimple } from "@/components/PriceSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WhyUsSection } from "@/components/WhyUsSection";
+import { CTASection } from "@/components/CTASection";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <PriceSectionSimple />
       <HowItWorksSection />
       <WhyUsSection />
+      <CTASection />
       <SiteFooter />
     </>
   );

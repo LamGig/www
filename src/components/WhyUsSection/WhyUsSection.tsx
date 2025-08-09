@@ -139,18 +139,18 @@ export const WhyUsSection = () => {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-gradient-to-r from-blue-50/50 to-white rounded-2xl border border-blue-100">
             <div className="text-left">
-              <div className="text-3xl font-bold text-gray-900 mb-1">7 Days</div>
-              <div className="text-gray-600">To Launch</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
+              <div className="text-gray-600">Test Coverage</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-gray-300" />
             <div className="text-left">
               <div className="text-3xl font-bold text-gray-900 mb-1">90%</div>
-              <div className="text-gray-600">Cost Reduction</div>
+              <div className="text-gray-600">Cost Saving</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-gray-300" />
             <div className="text-left">
-              <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
-              <div className="text-gray-600">Apps Delivered</div>
+              <div className="text-3xl font-bold text-gray-900 mb-1">24/7</div>
+              <div className="text-gray-600">Support Available</div>
             </div>
           </div>
         </motion.div>
