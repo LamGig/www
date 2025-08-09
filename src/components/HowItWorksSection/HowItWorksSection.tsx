@@ -161,7 +161,7 @@ export const HowItWorksSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div className="flex-1">
-                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary/90 rounded-xl items-center justify-center">
+                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary rounded-xl items-center justify-center">
                         <Zap className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -170,7 +170,7 @@ export const HowItWorksSection = () => {
                       <p className="text-gray-500 text-sm mb-4">Complete setup in 7 days</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
-                      <div className="w-14 h-14 bg-primary/90 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Zap className="w-7 h-7 text-white" />
                       </div>
                     </div>
@@ -182,7 +182,7 @@ export const HowItWorksSection = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Set up your backend, database, and CMS</span>
+                      <span>Set up your data and system</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -219,7 +219,7 @@ export const HowItWorksSection = () => {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                     <div className="flex-1">
-                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary/80 rounded-xl items-center justify-center">
+                      <div className="inline-flex md:hidden mb-4 w-14 h-14 bg-primary rounded-xl items-center justify-center">
                         <CheckCircle className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -228,7 +228,7 @@ export const HowItWorksSection = () => {
                       <p className="text-gray-500 text-sm mb-4">Go live with full support</p>
                     </div>
                     <div className="hidden sm:block sm:ml-6">
-                      <div className="w-14 h-14 bg-primary/80 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <CheckCircle className="w-7 h-7 text-white" />
                       </div>
                     </div>

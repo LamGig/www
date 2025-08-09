@@ -102,8 +102,6 @@ export const WhyUsSection = () => {
         >
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
-            // Use different opacities of the blue color for variety
-            const bgOpacities = ["bg-primary", "bg-primary/90", "bg-primary/80", "bg-primary/70"];
             return (
               <motion.div
                 key={index}
@@ -113,7 +111,7 @@ export const WhyUsSection = () => {
               >
                 <div className="relative p-8 rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
                   <div className="mb-6">
-                    <div className={`w-14 h-14 ${bgOpacities[index]} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                   </div>
