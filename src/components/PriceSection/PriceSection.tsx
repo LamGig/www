@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
 import { CheckCircle2, Sparkles, ArrowRight, MessageCircle, Zap, Shield, Users, Code2, Clock, HeartHandshake } from "lucide-react";
+import Link from "next/link";
 
 export const PriceSection = () => {
   const containerAnimation = {
@@ -30,27 +31,24 @@ export const PriceSection = () => {
   };
 
   const standardFeatures = [
-    "iOS & Android native apps",
+    "iOS & Android apps",
     "White-labeled with your branding",
     "Custom CMS for content management",
     "Backend infrastructure & hosting",
     "App store submission & approval",
-    "Push notifications",
     "Regular updates & maintenance",
     "24/7 technical support"
   ];
 
   const enterpriseFeatures = [
     "Completely custom app development",
-    "Unique UI/UX design",
+    "UI/UX design",
     "Advanced integrations (POS, CRM, etc.)",
     "Custom backend architecture",
     "Source code ownership",
     "Priority support & SLAs",
-    "Dedicated project manager",
-    "Multiple app variations",
-    "API development",
-    "Scalable infrastructure"
+    "Dedicated project manager & dev",
+    "QA from third-party firm"
   ];
 
   return (
@@ -161,22 +159,10 @@ export const PriceSection = () => {
             whileHover={{ scale: 1.02, y: -5 }}
             className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:shadow-3xl transition-all duration-300"
           >
-            {/* Premium badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <Chip 
-                size="sm"
-                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold px-6 py-1"
-              >
-                ENTERPRISE
-              </Chip>
-            </div>
 
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-white">Enterprise</h3>
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
               </div>
               <p className="text-gray-300 mb-6">Fully custom apps for unique business needs</p>
               
@@ -224,7 +210,7 @@ export const PriceSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-600">
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-primary" />
-              <span className="font-medium">Launch in 7 days</span>
+              <span className="font-medium">Full Support</span>
             </div>
             <div className="flex items-center gap-2">
               <HeartHandshake className="w-5 h-5 text-primary/80" />
@@ -252,6 +238,8 @@ export const PriceSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
+              as={Link}
+              href="/faqs"
               size="lg"
               variant="bordered"
               className="border-2 border-gray-300 text-gray-700 px-8 py-6 text-lg font-semibold hover:border-gray-400 transition-all duration-300"

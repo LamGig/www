@@ -96,7 +96,7 @@ export const MobileAppBenefitsSection = () => {
   ];
 
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section id="mobileappbenefits" className="relative py-32 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_50%,#000_40%,transparent_100%)]" />
       
@@ -124,7 +124,7 @@ export const MobileAppBenefitsSection = () => {
           </motion.div>
           <motion.h2 
             variants={itemAnimation}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-xl"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-xl mx-auto"
           >
             Why Your Business Needs a <span className="text-primary">Mobile App</span>
           </motion.h2>
@@ -132,7 +132,7 @@ export const MobileAppBenefitsSection = () => {
             variants={itemAnimation}
             className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
-            In today&apos;s mobile-first world, having an app isn&apos;t just nice to have—it&apos;s essential for growth. 
+            In today&apos;s mobile-first world, having an app isn&apos;t just nice to have, it&apos;s essential for growth. 
             Small businesses with mobile apps see dramatic increases in revenue and customer engagement.
           </motion.p>
         </motion.div>
