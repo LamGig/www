@@ -14,7 +14,8 @@ export const pricingPackages = {
       "Backend infrastructure & hosting",
       "App store submission & approval",
       "Regular updates & maintenance",
-      "24/7 technical support"
+      "24/7 technical support",
+      "Basic analytics & reporting"
     ],
     isPopular: true
   },

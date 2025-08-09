@@ -309,7 +309,7 @@ export const StartProjectForm = () => {
 
                             {/* Key Features - Compact */}
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {pricingPackages.standard.features.slice(0, 4).map((feature, index) => (
+                              {pricingPackages.standard.features.map((feature, index) => (
                                 <div key={index} className="flex items-start gap-1.5">
                                   <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                                   <span className="text-xs text-gray-600 leading-tight">{feature}</span>
@@ -344,7 +344,7 @@ export const StartProjectForm = () => {
 
                             {/* Key Features - Compact */}
                             <div className="grid grid-cols-2 gap-2 mb-4">
-                              {pricingPackages.enterprise.features.slice(0, 4).map((feature, index) => (
+                              {pricingPackages.enterprise.features.map((feature, index) => (
                                 <div key={index} className="flex items-start gap-1.5">
                                   <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                   <span className="text-xs text-gray-300 leading-tight">{feature}</span>
