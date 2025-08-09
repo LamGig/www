@@ -124,21 +124,6 @@ export const StartProjectForm = () => {
       }
 
       setSubmitStatus('success');
-      // Reset form after successful submission
-      setTimeout(() => {
-        setFormData({
-          package: null,
-          businessDescription: "",
-          projectNeeds: "",
-          firstName: "",
-          lastName: "",
-          company: "",
-          email: "",
-          phone: ""
-        });
-        setCurrentStep("package");
-        setSubmitStatus('idle');
-      }, 3000);
     } catch (error) {
       console.error('Submit error:', error);
       setSubmitStatus('error');
@@ -265,8 +250,133 @@ export const StartProjectForm = () => {
         </motion.div>
 
         {/* Form Content */}
-        <Card className="border border-gray-50">
-          <CardBody className="p-8">
+        <AnimatePresence mode="wait">
+          {submitStatus === 'success' ? (
+            /* Success Message */
+            <motion.div
+              key="success"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Card className="border border-gray-50">
+                <CardBody className="p-12 text-center">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                      delay: 0.1
+                    }}
+                    className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                  >
+                    <CheckCircle2 className="w-10 h-10 text-green-600" />
+                  </motion.div>
+                  
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="text-3xl font-bold text-gray-900 mb-4"
+                  >
+                    Thank You!
+                  </motion.h2>
+                  
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-lg text-gray-600 mb-6"
+                  >
+                    Your project has been submitted successfully.
+                  </motion.p>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8"
+                  >
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div className="text-left">
+                        <p className="text-sm font-medium text-gray-900">What happens next?</p>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Our team will review your project details and reach out to you within 24 hours with next steps.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <Button
+                      className="bg-primary text-white px-8"
+                      onPress={() => {
+                        setFormData({
+                          package: null,
+                          businessDescription: "",
+                          projectNeeds: "",
+                          firstName: "",
+                          lastName: "",
+                          company: "",
+                          email: "",
+                          phone: ""
+                        });
+                        setCurrentStep("package");
+                        setSubmitStatus('idle');
+                      }}
+                    >
+                      Submit Another Project
+                    </Button>
+                  </motion.div>
+                </CardBody>
+              </Card>
+            </motion.div>
+          ) : (
+            /* Form */
+            <motion.div
+              key="form"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Card className="border border-gray-50">
+                <CardBody className="p-8 relative">
+                  {/* Loading Overlay */}
+                  <AnimatePresence>
+                    {isSubmitting && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="absolute inset-0 bg-white/90 backdrop-blur-sm z-50 flex items-center justify-center rounded-lg"
+                      >
+                        <motion.div
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          exit={{ scale: 0.8, opacity: 0 }}
+                          className="text-center"
+                        >
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                            className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"
+                          />
+                          <p className="text-lg font-medium text-gray-900">Submitting your project...</p>
+                          <p className="text-sm text-gray-600 mt-2">Please wait a moment</p>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
             <AnimatePresence mode="wait">
               {/* Package Selection Step */}
               {currentStep === "package" && (
@@ -624,25 +734,7 @@ export const StartProjectForm = () => {
               )}
             </AnimatePresence>
 
-            {/* Success/Error Messages */}
-            {submitStatus === 'success' && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4"
-              >
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">Project submitted successfully!</p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      We&apos;ll review your request and get back to you as soon as possible.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
+            {/* Error Message */}
             {submitStatus === 'error' && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -693,8 +785,11 @@ export const StartProjectForm = () => {
                 </Button>
               )}
             </div>
-          </CardBody>
-        </Card>
+                </CardBody>
+              </Card>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
