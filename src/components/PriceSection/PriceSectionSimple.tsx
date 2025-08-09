@@ -97,10 +97,10 @@ export const PriceSectionSimple = () => {
             whileHover={{ scale: 1.01, y: -5 }}
             className="group"
           >
-            <div className={`relative p-8 rounded-2xl shadow-lg transition-all duration-300 h-full flex flex-col ${
+            <div className={`relative p-8 rounded-2xl transition-all duration-300 h-full flex flex-col ${
               pkg.highlight 
-                ? "border-2 border-primary bg-gradient-to-br from-blue-50/50 to-white hover:shadow-2xl hover:shadow-blue-500/20" 
-                : "border border-gray-200 bg-white hover:shadow-xl hover:border-blue-100"
+                ? "border-2 border-primary bg-gradient-to-br from-blue-50/50 to-white" 
+                : "border border-gray-200 bg-white hover:border-blue-100"
             }`}>
               {pkg.highlight && (
                 <div className="absolute -top-3 left-8">
@@ -130,7 +130,7 @@ export const PriceSectionSimple = () => {
                 size="lg"
                 className={`w-full mt-8 font-semibold ${
                   pkg.highlight
-                    ? "bg-primary text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
+                    ? "bg-primary text-white"
                     : "bg-white text-gray-900 border-2 border-gray-300 hover:border-gray-400"
                 }`}
                 endContent={<ArrowRight className="w-5 h-5" />}

@@ -86,7 +86,7 @@ export const PriceSection = () => {
           <motion.div 
             variants={itemAnimation}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
+            className="relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-blue-100 transition-all duration-300"
           >
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
@@ -112,7 +112,7 @@ export const PriceSection = () => {
 
             <Button
               size="lg"
-              className="w-full bg-primary text-white py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-primary/90 transition-all duration-300 mb-8"
+              className="w-full bg-primary text-white py-6 text-lg font-semibold hover:bg-primary/90 transition-all duration-300 mb-8"
               endContent={<ArrowRight className="w-5 h-5" />}
             >
               Get Started Today
@@ -141,7 +141,7 @@ export const PriceSection = () => {
           <motion.div 
             variants={itemAnimation}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:shadow-3xl transition-all duration-300"
+            className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700 transition-all duration-300"
           >
 
             <div className="mb-8">
@@ -232,7 +232,7 @@ export const PriceSection = () => {
             </Button>
             <Button
               size="lg"
-              className="bg-primary text-white px-8 py-6 text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-primary/90 transition-all duration-300"
+              className="bg-primary text-white px-8 py-6 text-lg font-semibold hover:bg-primary/90 transition-all duration-300"
               startContent={<MessageCircle className="w-5 h-5" />}
             >
               Schedule a Call

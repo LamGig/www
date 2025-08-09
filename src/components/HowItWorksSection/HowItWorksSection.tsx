@@ -99,13 +99,13 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 md:flex">
               1
             </div>
             
             <motion.div 
               whileHover={{ scale: 1.01, y: -2 }}
-              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
+              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden border border-gray-100 hover:border-blue-100 transition-all duration-300"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -149,13 +149,13 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 md:flex">
               2
             </div>
             
             <motion.div 
               whileHover={{ scale: 1.01, y: -2 }}
-              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
+              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden border border-gray-100 hover:border-blue-100 transition-all duration-300"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -207,13 +207,13 @@ export const HowItWorksSection = () => {
             viewport={{ once: true }}
           >
             {/* Step number */}
-            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg md:flex">
+            <div className="absolute left-0 top-8 w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white font-bold text-xl z-20 md:flex">
               3
             </div>
             
             <motion.div 
               whileHover={{ scale: 1.01, y: -2 }}
-              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-100 transition-all duration-300"
+              className="bg-white rounded-2xl p-8 md:ml-24 relative overflow-hidden border border-gray-100 hover:border-blue-100 transition-all duration-300"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">

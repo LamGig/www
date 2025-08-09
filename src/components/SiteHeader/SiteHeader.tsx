@@ -101,7 +101,7 @@ export const SiteHeader = () => {
               as={Link} 
               href="/start-project" 
               variant="solid"
-              className="bg-primary text-white hover:bg-primary/90 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 font-semibold h-10 px-4 rounded-lg group"
+              className="bg-primary text-white hover:bg-primary/90 transition-all duration-300 font-semibold h-10 px-4 rounded-lg group"
             >
               Start Project
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -135,7 +135,7 @@ export const SiteHeader = () => {
           <Button
             as={Link}
             href="/start-project"
-            className="w-full bg-primary text-white hover:bg-primary/90 shadow-lg shadow-blue-500/20 font-semibold h-11 rounded-lg"
+            className="w-full bg-primary text-white hover:bg-primary/90 font-semibold h-11 rounded-lg"
           >
             Start Your Project
             <ArrowRight className="w-4 h-4 ml-2" />

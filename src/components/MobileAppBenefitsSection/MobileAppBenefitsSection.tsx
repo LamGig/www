@@ -122,7 +122,7 @@ export const MobileAppBenefitsSection = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="group"
               >
-                <div className="relative p-8 rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
+                <div className="relative p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
                   <div className="mb-6">
                     <div className={`w-14 h-14 ${bgOpacities[index % bgOpacities.length]} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       {benefit.icon}

@@ -109,7 +109,7 @@ export const WhyUsSection = () => {
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="group"
               >
-                <div className="relative p-8 rounded-2xl border border-gray-100 bg-white shadow-lg hover:shadow-xl hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
+                <div className="relative p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-100 transition-all duration-300 h-full flex flex-col">
                   <div className="mb-6">
                     <div className={`w-14 h-14 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-7 h-7 text-white" />
@@ -137,7 +137,7 @@ export const WhyUsSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-gradient-to-r from-blue-50/50 to-white rounded-2xl border border-blue-100">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-8 p-8 bg-white rounded-2xl border border-blue-100">
             <div className="text-left">
               <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
               <div className="text-gray-600">Test Coverage</div>
