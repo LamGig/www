@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
-import { CheckCircle2, Sparkles, ArrowRight, MessageCircle, Zap, Shield, Users, Code2, Clock, HeartHandshake } from "lucide-react";
+import { CheckCircle2, Sparkles, ArrowRight, MessageCircle, Zap, Clock, HeartHandshake } from "lucide-react";
 import Link from "next/link";
 import { pricingPackages } from "./pricingData";
 
@@ -121,7 +121,7 @@ export const PriceSection = () => {
             </Button>
 
             <div className="space-y-4">
-              <p className="text-sm font-semibold text-gray-700 uppercase tracking-wider">What's included:</p>
+              <p className="text-sm font-semibold text-gray-700 uppercase tracking-wider">What&apos;s included:</p>
               <ul className="space-y-3">
                 {standard.features.map((feature, index) => (
                   <motion.li 

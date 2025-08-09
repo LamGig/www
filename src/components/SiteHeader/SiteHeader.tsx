@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { User, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Navbar, 
@@ -51,7 +51,7 @@ export const SiteHeader = () => {
         <div className="flex items-center flex-shrink-0">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="lg:hidden text-gray-600 hover:text-gray-900 mr-3 transition-colors"
+            className="lg:hidden text-gray-600 hover:text-gray-900 mr-3 transition-colors w-10 h-10 min-w-[40px] [&>span]:scale-125"
           />
           <NavbarBrand as={Link} href="/" className="flex items-center gap-3 group">
             <div className="relative w-[32px] h-[32px]">
@@ -120,7 +120,7 @@ export const SiteHeader = () => {
 
         {/* Right Section - Auth + CTA */}
         <div className="flex items-center gap-3 flex-shrink-0">
-          <NavbarItem className="hidden sm:flex">
+          {/* <NavbarItem className="hidden sm:flex">
             <Button
               as={Link}
               href="#signin"
@@ -130,7 +130,7 @@ export const SiteHeader = () => {
               <User size={18} />
               Login
             </Button>
-          </NavbarItem>
+          </NavbarItem> */}
           <NavbarItem>
             <Button 
               as={Link} 
@@ -157,7 +157,7 @@ export const SiteHeader = () => {
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarMenuItem className="border-t border-gray-100 mt-4 pt-4">
+        {/* <NavbarMenuItem className="border-t border-gray-100 mt-4 pt-4">
           <Link
             className="w-full text-base text-gray-700 hover:text-primary hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-2"
             href="#signin"
@@ -165,11 +165,11 @@ export const SiteHeader = () => {
             <User size={18} />
             Sign In
           </Link>
-        </NavbarMenuItem>
+        </NavbarMenuItem> */}
         <NavbarMenuItem className="mt-2">
           <Button
             as={Link}
-            href="/start-project"
+            href="/start"
             className="w-full bg-primary text-white hover:bg-primary/90 font-semibold h-11 rounded-lg"
           >
             Start Your Project

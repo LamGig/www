@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button, Chip } from "@heroui/react";
-import { ArrowRight, Users, Code2, Shield, Sparkles, CheckCircle2, Clock, Eye } from "lucide-react";
+import { ArrowRight, Users, Code2, Shield, Sparkles, CheckCircle2, Clock } from "lucide-react";
 import Link from "next/link";
 
 export const HeroSection = () => {

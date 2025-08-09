@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-LamGig is a Next.js 15 website for connecting clients with vetted experts for project work. It's a marketing site with a project submission form that sends emails via Resend API.
+LamGig is a Next.js 15 marketing website for a mobile app development service. It features a multi-step project submission form that sends client inquiries via Resend API.
 
 ## Development Commands
 
@@ -33,88 +33,69 @@ npm run lint
 - **HeroUI (@heroui/react)** as primary UI component library
 - **Framer Motion** for animations and transitions
 - **Lucide React** for iconography
-- **React Hook Form** for form management and validation
+- No React Hook Form - forms use controlled components with useState
 
 ### Email Service
 - **Resend** API for sending emails
 - Email templates using React components
 - API endpoint: `/api/send-project`
-
-### Project Structure
-```
-src/
-├── app/                    # Next.js App Router pages
-│   ├── api/               # API routes (send-project, send)
-│   ├── faqs/              # FAQ page
-│   ├── start-project/     # Project submission page
-│   ├── privacy-policy/    # Privacy policy page
-│   ├── terms-of-service/  # Terms page
-│   └── layout.tsx         # Root layout with fonts
-├── components/            # Reusable UI components
-│   ├── EmailTemplates/    # React email templates
-│   ├── HeroSection/       # Main hero with animated text
-│   ├── StartProjectForm/  # Multi-step form component
-│   ├── FAQsSection/       # FAQ accordion
-│   ├── HowItWorksSection/ # Process explanation
-│   ├── WhyUsSection/      # Value proposition
-│   ├── SiteHeader/        # Navigation header
-│   └── SiteFooter/        # Site footer
-```
+- Environment variable: `RESEND_API_KEY`
+- Sends to: `nhat@lamgig.com`
+- From address: `noreply@updatemail.lamgig.com`
 
 ### Key Components
 
-#### StartProjectForm
-- Multi-step form (project description → contact info)
-- Form validation with React Hook Form
-- API submission to `/api/send-project`
-- Success/error state management
-- Example prompts for user inspiration
+#### StartProjectForm (`/src/components/StartProjectForm/StartProjectForm.tsx`)
+- Multi-step form flow: package selection → business details → contact info
+- Form state managed with useState
+- Package pre-selection via URL query parameter (`?package=standard|enterprise`)
+- Email validation with regex: `/^[^\s@]+@[^\s@]+\.[^\s@]+$/`
+- API submission to `/api/send-project` endpoint
+- Animated success state with thank you message
+- Loading overlay during submission
+- Error handling with user-friendly messages
 
-#### HeroSection
-- Animated text reveals using Framer Motion
-- Responsive layout (hero content + form)
-- SVG pattern background decoration
+#### HeroSection (`/src/components/HeroSection/HeroSection.tsx`)
+- Animated text reveals using Framer Motion with stagger effects
+- Feature cards with hover animations
+- Trust indicators (pricing, timeline, support)
+- Background pattern with gradient orbs
+- Links to `/start` for main CTA
 
-### Styling Approach
-- **Tailwind CSS** with custom color scheme (black/white/gray)
-- Component-specific styling using className props
-- HeroUI component theming via classNames prop
-- Consistent border, shadow, and transition patterns
-- Responsive design with mobile-first approach
+### API Routes
 
-### Form Handling
-- Uses React Hook Form Controller for form state
-- Email validation with regex patterns
-- Required field validation
-- Real-time form validation feedback
-- Phone number is optional field
+#### `/api/send-project`
+- Accepts POST requests with project submission data
+- Required fields: email, firstName, lastName, businessDescription, projectNeeds, selectedPackage
+- Optional fields: company, phone
+- Uses Resend SDK to send formatted email
+- Returns success/error JSON response
 
-### Email Integration
-- Resend API key via environment variable: `RESEND_API_KEY`
-- Sends to: `nhat@lamgig.com`
-- From address: `noreply@updatemail.lamgig.com`
-- Uses React email templates for consistent formatting
+### Styling Patterns
+- Tailwind CSS with custom color scheme
+- Primary color accessed via `text-primary`, `bg-primary`
+- HeroUI component customization via `classNames` prop
+- Consistent animation durations (0.2s, 0.3s, 0.6s)
+- Border radius patterns: `rounded-lg`, `rounded-xl`, `rounded-2xl`
+- Shadow patterns for depth
+- Responsive breakpoints: `sm:`, `md:`, `lg:`
 
-## Development Notes
-
-### Path Aliases
-- `@/*` maps to `./src/*` for clean imports
+### Animation Patterns
+- Framer Motion for complex animations
+- Container/item pattern for staggered reveals
+- Spring animations for natural motion
+- Scale transforms on hover
+- Path animations for SVG elements
+- AnimatePresence for exit animations
 
 ### TypeScript Configuration
 - Strict mode enabled
 - Target: ES2017
-- Modern module resolution (bundler)
+- Module resolution: bundler
+- Path alias: `@/*` maps to `./src/*`
+- JSX: preserve (for Next.js optimization)
 
-### ESLint Configuration
-- Extends Next.js core web vitals and TypeScript rules
-- Uses flat config format with FlatCompat
-
-### Fonts
-- Uses Next.js font optimization with Geist and Geist Mono fonts
-- Font variables: `--font-geist-sans`, `--font-geist-mono`
-
-### Animation Patterns
-- Framer Motion for text reveals using clipPath animations
-- Subtle shadow animations on form containers
-- Consistent transition durations (0.2s, 0.6s)
-- Staggered animation delays for text elements
+### Font Setup
+- Geist Sans for body text (`--font-geist-sans`)
+- Geist Mono for code (`--font-geist-mono`)
+- Applied via CSS variables in layout.tsx
