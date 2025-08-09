@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   ArrowRight, 
@@ -42,6 +43,7 @@ interface FormData {
 }
 
 export const StartProjectForm = () => {
+  const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState<FormStep>("package");
   const [formData, setFormData] = useState<FormData>({
     package: null,
@@ -53,6 +55,14 @@ export const StartProjectForm = () => {
     email: "",
     phone: ""
   });
+
+  // Pre-select package from URL query parameter
+  useEffect(() => {
+    const packageParam = searchParams.get('package');
+    if (packageParam === 'standard' || packageParam === 'enterprise') {
+      setFormData(prev => ({ ...prev, package: packageParam }));
+    }
+  }, [searchParams]);
 
   const steps: { id: FormStep; label: string; icon: React.ReactNode }[] = [
     { id: "package", label: "Select Package", icon: <Package className="w-5 h-5" /> },

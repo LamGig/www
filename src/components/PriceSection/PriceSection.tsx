@@ -111,6 +111,8 @@ export const PriceSection = () => {
             </div>
 
             <Button
+              as={Link}
+              href="/start?package=standard"
               size="lg"
               className="w-full bg-primary text-white py-6 text-lg font-semibold hover:bg-primary/90 transition-all duration-300 mb-8"
               endContent={<ArrowRight className="w-5 h-5" />}
@@ -157,6 +159,8 @@ export const PriceSection = () => {
             </div>
 
             <Button
+              as={Link}
+              href="/start?package=enterprise"
               size="lg"
               className="w-full bg-white text-gray-900 py-6 text-lg font-semibold hover:bg-gray-100 transition-all duration-300 mb-8"
               startContent={<MessageCircle className="w-5 h-5" />}

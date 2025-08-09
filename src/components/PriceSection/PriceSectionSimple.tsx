@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { Chip, Button } from "@heroui/react";
+import Link from "next/link";
 import { pricingPackages } from "./pricingData";
 
 export const PriceSectionSimple = () => {
@@ -39,7 +40,8 @@ export const PriceSectionSimple = () => {
       yearlyPrice: standard.yearlyPriceShort,
       description: standard.descriptionShort,
       features: standard.features,
-      highlight: standard.isPopular
+      highlight: standard.isPopular,
+      packageType: 'standard'
     },
     {
       name: `${enterprise.name} Package`,
@@ -47,7 +49,8 @@ export const PriceSectionSimple = () => {
       yearlyPrice: enterprise.yearlyPriceShort,
       description: enterprise.descriptionShort,
       features: enterprise.features,
-      highlight: enterprise.isPopular
+      highlight: enterprise.isPopular,
+      packageType: 'enterprise'
     }
   ];
 
@@ -127,6 +130,8 @@ export const PriceSectionSimple = () => {
                 ))}
               </ul>
               <Button
+                as={Link}
+                href={`/start?package=${pkg.packageType}`}
                 size="lg"
                 className={`w-full mt-8 font-semibold ${
                   pkg.highlight
